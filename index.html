@@ -814,6 +814,20 @@
     .social-meta span { display: flex; align-items: center; gap: 5px; }
 
     /* ============================================================
+       BLOG
+    ============================================================ */
+    .blog-article { max-width: 850px; padding: clamp(24px, 4vw, 48px); border: 1px solid var(--grey-mid); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); background: var(--white); }
+    .blog-article h3 { font-size: clamp(1.35rem, 2.5vw, 1.9rem); margin: 14px 0 12px; }
+    .blog-article h4 { font-size: 1.1rem; margin: 28px 0 8px; }
+    .blog-article p { color: #222; margin: 0 0 16px; line-height: 1.85; }
+    .blog-article .blog-meta { color: var(--grey-text); font-size: .9rem; }
+    .language-switch { display: inline-flex; gap: 6px; padding: 5px; margin: 22px 0 8px; border: 1px solid var(--grey-mid); border-radius: 10px; background: var(--grey-light); }
+    .language-switch button { cursor: pointer; padding: 9px 18px; border: 0; border-radius: 7px; color: var(--navy); background: transparent; font-weight: 700; }
+    .language-switch button[aria-pressed="true"] { background: var(--navy); color: var(--white); }
+    .language-switch button:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+    .blog-translation[hidden] { display: none; }
+
+    /* ============================================================
        CONTACT
     ============================================================ */
     #contact { background: var(--navy); color: var(--white); }
@@ -1050,6 +1064,7 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#blog">Blog</a></li>
       <li><a href="#social">Social</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
@@ -1065,6 +1080,7 @@
     <a href="#services"   role="menuitem">Services</a>
     <a href="#projects"   role="menuitem">Projects</a>
     <a href="#gallery"    role="menuitem">Gallery</a>
+    <a href="#blog"       role="menuitem">Blog</a>
     <a href="#social"     role="menuitem">Social Activities</a>
     <a href="#contact"    role="menuitem">Contact</a>
   </div>
@@ -1862,6 +1878,52 @@
 <!-- ================================================================
      SECTION 10 — SOCIAL ACTIVITIES
 ================================================================ -->
+<section id="blog" aria-labelledby="blog-heading">
+  <div class="container">
+    <span class="section-tag">Insights &amp; Learning</span>
+    <h2 class="section-title" id="blog-heading">Blog</h2>
+    <div class="divider" aria-hidden="true"></div>
+    <p class="section-subtitle">Reflections on enterprise technology, learning, and practical AI product thinking.</p>
+
+    <article class="blog-article" aria-labelledby="blog-article-title">
+      <div class="blog-meta">By MD Shahid Hussain · Career &amp; Learning</div>
+      <div class="language-switch" role="group" aria-label="Choose article language">
+        <button type="button" data-blog-language="en" aria-pressed="true">English</button>
+        <button type="button" data-blog-language="hi-Latn" aria-pressed="false">Hinglish</button>
+      </div>
+      <div class="blog-translation" lang="en" data-language-panel="en">
+        <h3 id="blog-article-title">From Oracle Apps DBA to AI Product Management: My Learning Journey</h3>
+        <p>My career began with a practical question: how can technology help people do important work reliably? Over more than 15 years in IT, that question has taken me through technical support, Oracle database and applications administration, corporate training, resource coordination, and business leadership.</p>
+        <h4>What Oracle systems taught me</h4>
+        <p>Working around Oracle applications and databases taught me to look beyond an error message. A production issue can affect teams, timelines, and decisions. Good technical work starts with understanding the environment, investigating carefully, communicating clearly, and agreeing on the next step. Those habits remain valuable when exploring new technology.</p>
+        <h4>Why people matter as much as systems</h4>
+        <p>Training and resource coordination helped me see a different side of technology. A solution has little value if people cannot understand it or use it confidently. Listening to learners and organisations, defining the actual requirement, and connecting them with the right expertise made me more interested in the problems behind a request.</p>
+        <h4>My move toward AI product thinking</h4>
+        <p>Today I am building my knowledge in AI Product Management, product and design thinking, Retrieval-Augmented Generation (RAG), prompt engineering, and AI automation. I am interested in practical use cases: helping a support team find the right knowledge, making operational information easier to understand, or improving a workflow without adding unnecessary complexity.</p>
+        <p>For me, product thinking begins with a user and a problem. Who needs help? What do they do today? Where does the process fail? How would we know a proposed solution made their work better? AI can be part of the answer, but it needs clear goals, dependable information, human review where appropriate, and a way to measure results.</p>
+        <h4>The journey ahead</h4>
+        <p>I am still learning and applying these ideas. My background in enterprise systems, training, and leadership gives me useful context, while AI product work challenges me to keep asking better questions. I plan to share my learning, use cases, and practical observations here as that journey continues.</p>
+      </div>
+      <div class="blog-translation" lang="hi-Latn" data-language-panel="hi-Latn" hidden>
+        <h3>Oracle Apps DBA se AI Product Management tak: Mera Learning Journey</h3>
+        <p>Mere career ki shuruaat ek practical sawaal se hui: technology logon ko unka zaroori kaam bharose ke saath karne mein kaise madad kar sakti hai? IT mein 15 saal se zyada ke safar mein maine technical support, Oracle database aur applications administration, corporate training, resource coordination aur business leadership par kaam kiya hai.</p>
+        <h4>Oracle systems se kya seekha</h4>
+        <p>Oracle applications aur databases ke saath kaam karte hue maine seekha ki sirf error message dekhna kaafi nahi hota. Production issue ka asar teams, timelines aur decisions par pad sakta hai. Pehle environment samajhna, issue ko dhyan se investigate karna, saaf communication rakhna aur phir next step tay karna zaroori hota hai. Ye aadatein nayi technology ke saath bhi kaam aati hain.</p>
+        <h4>Systems ke saath log bhi zaroori hain</h4>
+        <p>Training aur resource coordination ne mujhe technology ka doosra pehlu dikhaya. Agar log kisi solution ko samajh ya confidently use nahi kar paate, to uska fayda kam ho jata hai. Learners aur organisations ki baat sunna, actual requirement samajhna aur sahi expertise se jodna—isse meri dilchaspi request ke peeche ki problem mein badhi.</p>
+        <h4>AI product thinking ki taraf mera safar</h4>
+        <p>Aaj main AI Product Management, product aur design thinking, Retrieval-Augmented Generation (RAG), prompt engineering aur AI automation mein apni knowledge badha raha hoon. Mujhe practical use cases mein dilchaspi hai: support team ko sahi knowledge jaldi milna, operational information ko asaan banana, ya bina extra complexity ke workflow improve karna.</p>
+        <p>Mere liye product thinking user aur uski problem se shuru hoti hai. Madad kise chahiye? Aaj woh kaam kaise karta hai? Process kahan rukta hai? Kaise pata chalega ki solution se kaam behtar hua? AI ek hissa ho sakta hai, lekin clear goals, reliable information, zaroorat ke mutabiq human review aur results ko measure karna bhi zaroori hai.</p>
+        <h4>Aage ka raasta</h4>
+        <p>Main in ideas ko abhi seekh aur apply kar raha hoon. Enterprise systems, training aur leadership ka mera background mujhe context deta hai; AI product work mujhe behtar sawaal poochne ki challenge deta hai. Aage apni learning, use cases aur practical observations yahan share karunga.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================================================================
+     SECTION 10 — SOCIAL ACTIVITIES
+================================================================ -->
 <section id="social" class="bg-light" aria-labelledby="social-heading">
   <div class="container">
     <span class="section-tag">Community &amp; Social</span>
@@ -2112,6 +2174,7 @@
         <li><a href="#digital-media">Digital Media Background</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#blog">Blog</a></li>
         <li><a href="#social">Social Activities</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -2155,6 +2218,15 @@
 <script>
   /* ── Year ── */
   document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+  /* ── Blog language toggle ── */
+  const blogLanguageButtons = document.querySelectorAll('[data-blog-language]');
+  const blogLanguagePanels = document.querySelectorAll('[data-language-panel]');
+  blogLanguageButtons.forEach(button => button.addEventListener('click', () => {
+    const language = button.dataset.blogLanguage;
+    blogLanguageButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    blogLanguagePanels.forEach(panel => { panel.hidden = panel.dataset.languagePanel !== language; });
+  }));
 
   /* ── Navbar scroll ── */
   const navbar = document.getElementById('navbar');
