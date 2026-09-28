@@ -256,6 +256,26 @@
         radial-gradient(ellipse 40% 60% at 10% 80%, rgba(30,184,184,.07) 0%, transparent 60%);
       pointer-events: none;
     }
+    .hero-ai-network {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 0; opacity: .64;
+    }
+    .hero-ai-network .network-line {
+      fill: none; stroke: #39dce4; stroke-width: 1.25;
+      stroke-dasharray: 5 13; opacity: .42;
+      animation: network-flow 28s linear infinite;
+    }
+    .hero-ai-network .network-line:nth-child(2n) { animation-duration: 36s; animation-direction: reverse; }
+    .hero-ai-network .network-node { fill: #5deaf0; filter: url(#network-glow); transform-box: fill-box; transform-origin: center; animation: network-pulse 6s ease-in-out infinite; }
+    .hero-ai-network .network-node:nth-child(3n) { animation-delay: -2s; }
+    .hero-ai-network .network-node:nth-child(4n) { animation-delay: -4s; }
+    .hero-ai-network .network-wave { fill: none; stroke: #40cbd9; stroke-width: 1; opacity: .3; stroke-dasharray: 2 12; animation: network-flow 42s linear infinite; }
+    @keyframes network-flow { to { stroke-dashoffset: -360; } }
+    @keyframes network-pulse { 0%, 100% { opacity: .4; transform: scale(.8); } 50% { opacity: 1; transform: scale(1.35); } }
+    @media (max-width: 1024px), (prefers-reduced-motion: reduce) {
+      .hero-ai-network .network-line, .hero-ai-network .network-node, .hero-ai-network .network-wave { animation: none; }
+    }
+    @media (max-width: 768px) { .hero-ai-network { opacity: .27; } }
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1092,6 +1112,37 @@
      SECTION 1 — HOME / HERO
 ================================================================ -->
 <section id="home" aria-label="Hero section">
+  <svg class="hero-ai-network" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="network-fade"><stop offset="0" stop-color="white" stop-opacity="0"/><stop offset=".5" stop-color="white" stop-opacity=".22"/><stop offset="1" stop-color="white" stop-opacity="1"/></linearGradient>
+      <mask id="network-mask"><rect width="1440" height="900" fill="url(#network-fade)"/></mask>
+      <filter id="network-glow" x="-300%" y="-300%" width="700%" height="700%"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+    <g mask="url(#network-mask)">
+      <g class="network-links">
+        <path class="network-line" d="M620 252 Q750 140 854 231 T1105 164 T1390 210"/>
+        <path class="network-line" d="M685 550 Q793 408 854 231 Q1008 314 1105 164"/>
+        <path class="network-line" d="M854 231 Q977 407 1066 405 T1390 210"/>
+        <path class="network-line" d="M685 550 Q858 610 987 640 T1260 571 T1450 665"/>
+        <path class="network-line" d="M1066 405 Q1160 339 1250 374 T1416 490"/>
+        <path class="network-line" d="M987 640 Q1036 490 1066 405 Q1191 467 1260 571"/>
+        <path class="network-line" d="M1105 164 Q1295 90 1390 210 L1250 374 L1416 490"/>
+        <path class="network-line" d="M854 231 Q793 408 685 550 Q802 723 987 640"/>
+      </g>
+      <g class="network-waves">
+        <path class="network-wave" d="M480 756 Q735 665 930 747 T1440 690"/>
+        <path class="network-wave" d="M470 782 Q729 691 940 774 T1440 720"/>
+        <path class="network-wave" d="M480 808 Q737 718 950 800 T1440 750"/>
+      </g>
+      <g class="network-nodes">
+        <circle class="network-node" cx="620" cy="252" r="3"/><circle class="network-node" cx="854" cy="231" r="5"/>
+        <circle class="network-node" cx="1105" cy="164" r="4"/><circle class="network-node" cx="1390" cy="210" r="4"/>
+        <circle class="network-node" cx="685" cy="550" r="3"/><circle class="network-node" cx="1066" cy="405" r="5"/>
+        <circle class="network-node" cx="1250" cy="374" r="4"/><circle class="network-node" cx="1416" cy="490" r="3"/>
+        <circle class="network-node" cx="987" cy="640" r="4"/><circle class="network-node" cx="1260" cy="571" r="5"/>
+      </g>
+    </g>
+  </svg>
   <div class="hero-grid">
 
     <!-- Left: content -->
