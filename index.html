@@ -2297,10 +2297,9 @@
           Please introduce yourself and describe your requirement, scope, timeline, and preferred way to connect. Then send your enquiry via email or WhatsApp using the buttons below.
         </p>
 
-        <div class="form-note" role="alert" aria-live="polite">
-          <strong>Note:</strong> This form does not submit automatically. Please send your completed enquiry
-          directly to <strong>hussain.dbaorg260@gmail.com</strong> or reach us on
-          WhatsApp at <strong>+91 97028 06769</strong>.
+        <div class="form-note">
+          Fill in your details, then choose <strong>Send via WhatsApp</strong> or <strong>Send via Email</strong>.
+          Review the message in the app and press Send to complete your enquiry.
         </div>
 
         <form id="enquiryForm" novalidate aria-label="Enquiry form">
@@ -2634,5 +2633,48 @@
 <!-- Cloudflare Web Analytics -->
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"d2995b4532dd46119c222077850ec087"}'></script>
 <!-- End Cloudflare Web Analytics -->
+
+<button id="chatOpen" type="button" aria-controls="portfolioChat" aria-expanded="false" style="position:fixed;bottom:22px;right:22px;z-index:1000;border:0;border-radius:30px;padding:15px 20px;background:#1a2744;color:white;cursor:pointer;box-shadow:0 4px 18px #0003">Chat / Enquire</button>
+<section id="portfolioChat" hidden aria-label="Portfolio service assistant" style="position:fixed;bottom:85px;right:16px;width:min(360px,calc(100vw - 32px));max-height:70vh;overflow:auto;z-index:1001;background:white;color:#1a2744;border:1px solid #ddd;border-radius:16px;padding:22px;box-shadow:0 8px 30px #0003">
+<button id="chatClose" type="button" aria-label="Close chat" style="float:right;border:0;background:transparent;font-size:24px;cursor:pointer">×</button>
+<h3>Welcome! How can I help?</h3>
+<p style="margin:12px 0">Thank you for visiting my portfolio and blog. Choose a service to discuss your requirements.</p>
+<p style="font-size:12px;margin-bottom:12px">Automated service menu · Connect with Shahid on WhatsApp for a personal response.</p>
+<div id="chatServices" style="display:grid;gap:8px"></div>
+<p id="chatReply" role="status" style="margin:14px 0"></p>
+<a id="chatWhatsApp" href="https://wa.me/919702806769?text=Hello%20Shahid%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20my%20requirements." target="_blank" rel="noopener" style="display:block;padding:12px;background:#167b3b;color:white;border-radius:8px;text-align:center">Continue on WhatsApp</a>
+<a href="#contact" style="display:block;margin-top:12px;text-align:center">Use the enquiry form</a>
+</section>
+<script>
+(() => {
+ const panel = document.getElementById('portfolioChat');
+ const open = document.getElementById('chatOpen');
+ const close = document.getElementById('chatClose');
+ function toggle(show) { panel.hidden = !show; open.setAttribute('aria-expanded', String(show)); if(show) close.focus(); else open.focus(); }
+ open.addEventListener('click', () => toggle(panel.hidden));
+ close.addEventListener('click', () => toggle(false));
+ panel.addEventListener('keydown', e => { if(e.key === 'Escape') toggle(false); });
+ const services = {
+ 'Remote Oracle Apps DBA Support': 'Please share your Oracle / EBS version, the issue or support scope, and your preferred timeline. Do not include passwords or confidential system data.',
+ 'AI / AI-ML Collaboration': 'Please describe your business problem, current workflow, and the outcome you want to achieve.',
+ 'Oracle Applications + AI': 'Please share the Oracle workflow you want to improve and the AI use case you would like to explore.',
+ 'Corporate Training': 'Please share the technology, participant count, experience level, delivery mode, and preferred dates.',
+ 'College Training': 'Please share the course topic, student level, batch size, location or online preference, and schedule.',
+ 'Other Enquiry': 'Please briefly describe your requirement and preferred way to connect.'
+ };
+ Object.entries(services).forEach(([name,reply]) => {
+ const b=document.createElement('button'); b.type='button'; b.textContent=name;
+ b.style.cssText='padding:10px;text-align:left;border:1px solid #ccc;border-radius:8px;background:#f6f8fa;color:#1a2744;cursor:pointer';
+ b.addEventListener('click',()=> {
+ document.getElementById('chatReply').textContent=reply;
+ document.getElementById('chatWhatsApp').href='https://wa.me/919702806769?text='+encodeURIComponent('Hello Shahid, I visited your portfolio / blog. I am interested in '+name+'.
+
+My requirement: ');
+ });
+ document.getElementById('chatServices').appendChild(b);
+ });
+})();
+</script>
+
 </body>
 </html>
