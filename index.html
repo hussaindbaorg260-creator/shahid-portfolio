@@ -1108,6 +1108,21 @@
 .experience-clients ul {padding-left:22px;margin-top:14px;line-height:2;}
 @media(max-width:700px){.experience-summary{grid-template-columns:1fr;}}
 
+
+#demo-classes[hidden]{display:none;}
+.demo-card{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:24px;border:1px solid var(--grey-mid);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);background:white;}
+.demo-poster{position:relative;isolation:isolate;overflow:hidden;min-height:360px;display:flex;flex-direction:column;justify-content:center;padding:36px;border-radius:12px;background:radial-gradient(ellipse at 95% 80%,#007d89 0,transparent 60%),linear-gradient(130deg,#06162b,#173b55);color:white;}
+.demo-poster:before{content:'';position:absolute;inset:0;z-index:-1;opacity:.35;background-image:radial-gradient(circle,#53fff0 1.5px,transparent 2px);background-size:30px 30px;mask-image:linear-gradient(90deg,transparent,#000);}
+.demo-orbit{position:absolute;z-index:-1;width:360px;height:360px;border:1px solid #4eeadd66;border-radius:50%;right:-130px;bottom:-100px;box-shadow:0 0 0 35px #00d5dd15,0 0 0 70px #00d5dd12,0 0 0 105px #00d5dd0d;}
+.demo-free{font-size:clamp(1.1rem,2vw,1.6rem);font-weight:800;letter-spacing:.04em;color:#52e6dc;margin-bottom:26px;}
+.demo-poster h3{font-size:clamp(1.8rem,3.2vw,2.6rem);line-height:1.25;margin-bottom:26px;color:white;}
+.demo-poster p{font-size:1.05rem;color:white;}.demo-poster strong{color:#52e6dc;}
+.demo-info{align-self:center;}.demo-status{display:inline-block;padding:8px 12px;border-radius:20px;background:#def6f3;color:#006e69;font-size:.85rem;font-weight:700;}
+.demo-info h3{font-size:1.5rem;line-height:1.3;margin:16px 0 10px;}.demo-info>p{color:var(--grey-text);line-height:1.7;}
+.demo-details{margin:22px 0;}.demo-details div{display:grid;grid-template-columns:100px 1fr;gap:12px;margin:12px 0;}.demo-details dt{font-weight:600;}.demo-details dd{margin:0;color:var(--grey-text);}
+.demo-actions{display:flex;gap:12px;flex-wrap:wrap;}.demo-whatsapp{border:1px solid var(--navy);color:var(--navy);background:white;}.demo-info .demo-note{font-size:.82rem;margin-top:16px;}
+@media(max-width:800px){.demo-card{grid-template-columns:1fr;padding:16px;gap:24px;}.demo-poster{min-height:300px;padding:26px;}.demo-actions .btn{width:100%;justify-content:center;}}
+
 </style>
 </head>
 
@@ -1133,6 +1148,7 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#demo-classes">Demo Classes</a></li>
       <li><a href="#blog">Blog</a></li>
       <li><a href="#social">Social</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
@@ -1149,6 +1165,7 @@
     <a href="#services"   role="menuitem">Services</a>
     <a href="#projects"   role="menuitem">Projects</a>
     <a href="#gallery"    role="menuitem">Gallery</a>
+    <a href="#demo-classes" role="menuitem">Demo Classes</a>
     <a href="#blog"       role="menuitem">Blog</a>
     <a href="#social"     role="menuitem">Social Activities</a>
     <a href="#contact"    role="menuitem">Contact</a>
@@ -1258,6 +1275,41 @@
     <span>Scroll</span>
     <i class="fa-solid fa-chevron-down"></i>
   </div>
+</section>
+
+
+<!-- DEMO CLASSES: update the topic, schedule and registration link here for each session. Add hidden to this section when no demo is available. -->
+<section id="demo-classes" aria-labelledby="demo-heading">
+ <div class="container">
+  <span class="section-tag">Learn With Me</span>
+  <h2 class="section-title" id="demo-heading">Upcoming Demo Classes</h2>
+  <div class="divider" aria-hidden="true"></div>
+  <p class="section-subtitle">Explore practical technology through live introductory sessions.</p>
+  <article class="demo-card" aria-labelledby="demo-topic">
+   <div class="demo-poster">
+    <div class="demo-orbit" aria-hidden="true"></div>
+    <span class="demo-free">FREE DEMO SESSION</span>
+    <h3>RAG, AI Agents &amp;<br>Agentic AI</h3>
+    <p>With <strong>MD Shahid Hussain</strong></p>
+   </div>
+   <div class="demo-info">
+    <span class="demo-status">Registration of Interest Open</span>
+    <h3 id="demo-topic">Introduction to RAG &amp; AI Agents</h3>
+    <p>A practical introduction for students and working professionals.</p>
+    <dl class="demo-details">
+     <div><dt>Schedule</dt><dd>To Be Announced</dd></div>
+     <div><dt>Mode</dt><dd>Online</dd></div>
+     <div><dt>Language</dt><dd>English / Hinglish</dd></div>
+     <div><dt>Session</dt><dd>Free Demo</dd></div>
+    </dl>
+    <div class="demo-actions">
+     <a class="btn btn-primary" href="https://wa.me/919702806769?text=Hello%20Shahid%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20register%20my%20interest%20in%20the%20free%20demo%20on%20RAG%2C%20AI%20Agents%20%26%20Agentic%20AI.%0A%0AName%3A%20%0AStudent%20/%20Working%20Professional%3A%20%0APreferred%20availability%3A%20" target="_blank" rel="noopener">Register Interest <span aria-hidden="true">→</span></a>
+     <a class="btn demo-whatsapp" href="https://wa.me/919702806769?text=Hello%20Shahid%2C%20I%20would%20like%20to%20enquire%20about%20your%20demo%20classes." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+    </div>
+    <p class="demo-note">Send your details on WhatsApp to register your interest. The session date and joining instructions will be shared once confirmed.</p>
+   </div>
+  </article>
+ </div>
 </section>
 
 <!-- ================================================================
