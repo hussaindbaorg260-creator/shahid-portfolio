@@ -1123,6 +1123,15 @@
 .demo-actions{display:flex;gap:12px;flex-wrap:wrap;}.demo-whatsapp{border:1px solid var(--navy);color:var(--navy);background:white;}.demo-info .demo-note{font-size:.82rem;margin-top:16px;}
 @media(max-width:800px){.demo-card{grid-template-columns:1fr;padding:16px;gap:24px;}.demo-poster{min-height:300px;padding:26px;}.demo-actions .btn{width:100%;justify-content:center;}}
 
+
+/* Keep desktop menu labels on one line and use the header width. */
+#navbar .nav-inner {max-width:1600px;width:100%;gap:18px;padding-left:24px;padding-right:24px;}
+#navbar .nav-logo {flex:1 1 300px;min-width:0;}
+#navbar .nav-links {flex:0 0 auto;gap:2px;}
+#navbar .nav-links a {white-space:nowrap;padding-left:9px;padding-right:9px;}
+@media (max-width:1200px) {#navbar .nav-links {display:none;}#navbar .nav-toggle {display:block;}#navbar .nav-logo {flex:1;}}
+@media (max-width:600px) {#navbar .nav-inner {padding-left:16px;padding-right:16px;gap:12px;}}
+
 </style>
 </head>
 
