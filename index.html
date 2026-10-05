@@ -1223,6 +1223,21 @@ h2, h3, h4 { text-align:left; }
 @media(max-width:768px){.service-shortcuts{padding:28px 20px;}.service-shortcut-grid{grid-template-columns:1fr;gap:14px;}.service-shortcut{padding:20px;}.btn{min-height:44px;} .hero-buttons .btn{flex:1 1 180px;justify-content:center;} .hero-stats{max-width:none;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.reveal{opacity:1;transform:none;transition:none;}}
 
+
+.service-details {margin-top:auto;}
+.service-details summary {list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.service-details summary::-webkit-details-marker {display:none;}
+.service-details summary:focus-visible {outline:3px solid #1a2744;outline-offset:4px;}
+.service-details[open] summary span {transform:rotate(45deg);}
+.service-detail-body {padding-top:18px;}
+.service-detail-body h4 {font-size:1rem;margin-bottom:12px;}
+.service-detail-body ul {list-style:disc;padding-left:20px;margin-bottom:16px;}
+.service-detail-body li {margin-bottom:10px;color:#526172;}
+.service-detail-body p {font-size:.94rem;line-height:1.7;margin-bottom:16px;text-align:left;}
+.service-shortcut-grid {align-items:start;}
+.service-detail-body .btn {width:100%;}
+@media(max-width:768px){.service-details summary{min-height:48px;} .service-detail-body{overflow-wrap:break-word;}}
+
 </style>
 </head>
 
@@ -1382,7 +1397,7 @@ h2, h3, h4 { text-align:left; }
 
 
 <!-- DEMO CLASSES: update the topic, schedule and registration link here for each session. Add hidden to this section when no demo is available. -->
-<section id="service-enquiries" class="service-shortcuts" aria-labelledby="enquiry-shortcuts-heading"><div class="container"><h2 id="enquiry-shortcuts-heading">How Can I Help You?</h2><div class="service-shortcut-grid"><article class="service-shortcut"><h3>Remote Oracle Apps DBA Support</h3><p>Discuss remote database and Oracle applications support, maintenance, and troubleshooting.</p><a class="btn btn-primary" href="#contact" data-enquiry="remote-oracle-dba">Discuss DBA Support</a></article><article class="service-shortcut"><h3>Corporate & College Training</h3><p>Share your training topic, audience, delivery mode, and preferred schedule.</p><a class="btn btn-primary" href="#contact" data-enquiry="ai-training">Request Training</a></article><article class="service-shortcut"><h3>AI Product Collaboration</h3><p>Connect to discuss AI product ideas, RAG use cases, AI Agents, and practical collaboration.</p><a class="btn btn-primary" href="#contact" data-enquiry="ai-collaboration">Discuss AI Collaboration</a></article></div></div></section>
+<section id="service-enquiries" class="service-shortcuts" aria-labelledby="enquiry-shortcuts-heading"><div class="container"><h2 id="enquiry-shortcuts-heading">How Can I Help You?</h2><div class="service-shortcut-grid"><article class="service-shortcut"><h3>Remote Oracle Apps DBA Support</h3><p>Discuss remote database and Oracle applications support, maintenance, and troubleshooting.</p><details class="service-details"><summary class="btn btn-primary">Discuss DBA Support <span aria-hidden="true">+</span></summary><div class="service-detail-body"><h4>Oracle Apps DBA Support Details</h4><ul><li>Oracle E-Business Suite administration and remote maintenance enquiries.</li><li>Patching, upgrades, and cloning requirements.</li><li>Backup and recovery, performance troubleshooting, and Concurrent Manager issues.</li></ul><p>Please share your Oracle Database / EBS version, issue or task, required support hours, and target timeline.</p><a class="btn btn-primary" href="#contact" data-enquiry="remote-oracle-dba">Send Enquiry</a></div></details></article><article class="service-shortcut"><h3>Corporate & College Training</h3><p>Share your training topic, audience, delivery mode, and preferred schedule.</p><details class="service-details"><summary class="btn btn-primary">Request Training <span aria-hidden="true">+</span></summary><div class="service-detail-body"><h4>Corporate & College Training Details</h4><ul><li>Training enquiries in Data Science, Data Analytics, AI/ML, Generative AI, RAG, AI Agents, and Agentic AI.</li><li>Corporate teams, college students, and working professionals.</li><li>Online or onsite delivery and trainer coordination based on your requirements.</li></ul><p>Please share the topic, learner level, participant count, location / delivery mode, preferred dates, and lab requirements. Trainer availability and scope will be confirmed after discussion.</p><a class="btn btn-primary" href="#contact" data-enquiry="ai-training">Send Enquiry</a></div></details></article><article class="service-shortcut"><h3>AI Product Collaboration</h3><p>Connect to discuss AI product ideas, RAG use cases, AI Agents, and practical collaboration.</p><details class="service-details"><summary class="btn btn-primary">Discuss AI Collaboration <span aria-hidden="true">+</span></summary><div class="service-detail-body"><h4>AI Product Collaboration Details</h4><ul><li>AI product discovery, business use-case definition, and product / design thinking.</li><li>Discussion of RAG knowledge assistants, AI Agents, and Agentic AI workflows.</li><li>Prototype planning, learning projects, and collaboration opportunities.</li></ul><p>Please share the business problem, intended users, available data, current project stage, and expected outcome. Implementation scope and responsibilities will be agreed after discussion.</p><a class="btn btn-primary" href="#contact" data-enquiry="ai-collaboration">Send Enquiry</a></div></details></article></div></div></section>
 <section id="demo-classes" aria-labelledby="demo-heading">
  <div class="container">
   <span class="section-tag">Learn With Me</span>
