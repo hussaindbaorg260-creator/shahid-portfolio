@@ -1238,6 +1238,14 @@ h2, h3, h4 { text-align:left; }
 .service-detail-body .btn {width:100%;}
 @media(max-width:768px){.service-details summary{min-height:48px;} .service-detail-body{overflow-wrap:break-word;}}
 
+
+/* Book preview and WhatsApp purchase */
+.ebook-card{display:grid;grid-template-columns:minmax(220px,300px) minmax(0,1fr);gap:32px;align-items:center;margin-top:24px;padding:28px;border:1px solid rgba(179,147,77,.35);border-radius:20px;background:rgba(255,255,255,.035)}
+.ebook-cover{display:block;width:100%;height:auto;max-width:300px;margin:auto;border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.22)}
+.ebook-copy h3{font-size:clamp(1.4rem,3vw,2rem);line-height:1.25;margin:0 0 12px}.ebook-copy p{text-align:left!important;margin:12px 0}.ebook-price{font-size:1.9rem;font-weight:800;color:var(--gold,#c6a45c)}
+.ebook-actions{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}.ebook-actions .btn{white-space:normal;text-align:center}.ebook-note{font-size:.9rem;opacity:.85;line-height:1.6}
+@media(max-width:680px){.ebook-card{grid-template-columns:1fr;gap:22px;padding:20px}.ebook-cover{max-width:230px}.ebook-actions{flex-direction:column}.ebook-actions .btn{width:100%;justify-content:center}}
+
 </style>
   <meta property="og:image" content="https://hussaindbaorg260-creator.github.io/shahid-portfolio/portfolio-share.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
@@ -1271,6 +1279,7 @@ h2, h3, h4 { text-align:left; }
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#service-enquiries">Services &amp; Enquiries</a></li>
       <li><a href="#demo-classes">Demo Classes</a></li>
+      <li><a href="#books">Books</a></li>
       <li><a href="#blog">Blog</a></li>
       <li><a href="#social">Social</a></li>
       <li><a href="#contact" class="nav-cta">Contact</a></li>
@@ -1289,6 +1298,7 @@ h2, h3, h4 { text-align:left; }
     <a href="#gallery"    role="menuitem">Gallery</a>
     <a href="#service-enquiries" role="menuitem">Services &amp; Enquiries</a>
     <a href="#demo-classes" role="menuitem">Demo Classes</a>
+    <a href="#books" role="menuitem">Books &amp; eBooks</a>
     <a href="#blog"       role="menuitem">Blog</a>
     <a href="#social"     role="menuitem">Social Activities</a>
     <a href="#contact"    role="menuitem">Contact</a>
@@ -2180,6 +2190,26 @@ h2, h3, h4 { text-align:left; }
 <!-- ================================================================
      SECTION 10 — SOCIAL ACTIVITIES
 ================================================================ -->
+<section id="books" aria-labelledby="books-heading">
+<div class="container">
+<p class="section-label">Practical Learning Resources</p>
+<h2 class="section-title" id="books-heading">Books &amp; eBooks</h2>
+<div class="ebook-card">
+<img class="ebook-cover" src="oracle-dba-cover.jpg" width="1024" height="1536" loading="lazy" alt="S³ Academy Oracle DBA Practice book cover, PDF eBook priced at ₹199">
+<div class="ebook-copy">
+<h3>Oracle DBA Practice</h3>
+<p><strong>An End-to-End Guide for Beginners</strong></p>
+<p>Explore practical notes on database installation, startup and shutdown, parameter files, tablespaces, users, backup and recovery, RMAN, Data Pump, ASM, Data Guard and performance tuning.</p>
+<p>Presented by <strong>S³ Academy</strong> · PDF/eBook</p>
+<p class="ebook-price">₹199 Only</p>
+<div class="ebook-actions">
+<a class="btn btn-outline" href="Oracle_DBA_Practice_Free_Sample.pdf" target="_blank" rel="noopener">Read Free Sample</a>
+<a class="btn btn-primary" href="https://wa.me/919702806769?text=Hello%20Shahid%2C%20I%20would%20like%20to%20buy%20Oracle%20DBA%20Practice%3A%20An%20End-to-End%20Guide%20for%20Beginners%20%28PDF/eBook%29%20for%20%E2%82%B9199.%20Please%20share%20the%20payment%20details%20and%20PDF%20delivery%20process." target="_blank" rel="noopener">Buy eBook ₹199 via WhatsApp</a>
+</div>
+<p class="ebook-note">Purchase through WhatsApp: request payment details, complete payment, and receive the PDF after payment is confirmed. Delivery is handled manually; this button opens a purchase enquiry.</p>
+<p class="ebook-note">Examples in the notes include Oracle 11g and 12c environments. The free sample includes contents and a startup/shutdown excerpt.</p>
+</div></div></div></section>
+
 <section id="blog" aria-labelledby="blog-heading">
   <div class="container">
     <span class="section-tag">Insights &amp; Learning</span>
@@ -2608,7 +2638,8 @@ h2, h3, h4 { text-align:left; }
         <li><a href="#digital-media">Digital Media Background</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#blog">Blog</a></li>
+        <li><a href="#books">Books</a></li>
+      <li><a href="#blog">Blog</a></li>
         <li><a href="#social">Social Activities</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
