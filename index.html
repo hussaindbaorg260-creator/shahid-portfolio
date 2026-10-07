@@ -1249,6 +1249,10 @@ h2, h3, h4 { text-align:left; }
 .ebook-actions{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}.ebook-actions .btn{white-space:normal;text-align:center}.ebook-note{font-size:.9rem;opacity:.85;line-height:1.6}
 @media(max-width:680px){.ebook-card{grid-template-columns:1fr;gap:22px;padding:20px}.ebook-cover{max-width:230px}.ebook-actions{flex-direction:column}.ebook-actions .btn{width:100%;justify-content:center}}
 
+
+.footer-traffic{display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px 20px;border:1px solid rgba(255,255,255,.25);border-radius:12px;background:rgba(255,255,255,.06);margin:8px 0;max-width:100%}
+.footer-traffic-title{font-weight:700;color:#fff}.footer-traffic img{display:block;max-width:100%}.footer-traffic small{font-size:11px;color:#ccd7e3;line-height:1.4;text-align:center}
+.book-view-counter{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0;font-size:.85rem;color:#082544}.book-view-counter img{max-width:100%;width:auto}.book-view-counter small{flex-basis:100%;line-height:1.5}.book-view-counter [hidden]{display:none}
 </style>
   <meta property="og:image" content="https://hussaindbaorg260-creator.github.io/shahid-portfolio/portfolio-share.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
@@ -2205,6 +2209,11 @@ h2, h3, h4 { text-align:left; }
 <p>Explore practical notes on database installation, startup and shutdown, parameter files, tablespaces, users, backup and recovery, RMAN, Data Pump, ASM, Data Guard and performance tuning.</p>
 <p>Presented by <strong>S³ Academy</strong> · PDF/eBook</p>
 <p class="ebook-price">₹199 Only</p>
+<div class="book-view-counter" aria-label="Book section views">
+<img id="book-view-badge" data-counter-src="https://hits.sh/hussaindbaorg260-creator.github.io/shahid-portfolio/books-20261007.svg?label=Book%20Section%20Views&amp;color=00a8a8&amp;labelColor=082544" alt="Book section views counter" height="24" hidden referrerpolicy="no-referrer">
+<span id="book-view-status" role="status">Views counter loads when this book is viewed.</span>
+<small>Tracking from 7 October 2026 · Repeat visits may be included.</small>
+</div>
 <div class="ebook-actions">
 <a class="btn btn-outline" href="Oracle_DBA_Practice_Free_Sample.pdf" target="_blank" rel="noopener">Read Free Sample</a>
 <a class="btn btn-primary" href="https://wa.me/919702806769?text=Hello%20Shahid%2C%20I%20would%20like%20to%20buy%20Oracle%20DBA%20Practice%3A%20An%20End-to-End%20Guide%20for%20Beginners%20%28PDF/eBook%29%20for%20%E2%82%B9199.%20Please%20share%20the%20payment%20details%20and%20PDF%20delivery%20process." target="_blank" rel="noopener">Buy eBook ₹199 via WhatsApp</a>
@@ -2662,9 +2671,11 @@ h2, h3, h4 { text-align:left; }
 
   <div class="footer-bottom">
     <p>&copy; <span id="currentYear">2026</span> MD Shahid Hussain · Technology, Corporate Training &amp; AI · India</p>
-    <p style="margin:8px 0 0;">
+    <div class="footer-traffic" aria-label="Portfolio traffic counter">
+      <span class="footer-traffic-title">Portfolio Page Views</span>
       <img src="https://hits.sh/hussaindbaorg260-creator.github.io/shahid-portfolio.svg?label=Page%20Views&amp;color=00a8a8&amp;labelColor=1a2744" alt="Portfolio page views counter" width="150" height="20" referrerpolicy="no-referrer" />
-    </p>
+      <small>Repeat visits and refreshes may be included.</small>
+    </div>
   </div>
 </footer>
 
@@ -2910,6 +2921,40 @@ document.querySelectorAll('[data-enquiry]').forEach(function(link){
   if(field){field.value=link.dataset.enquiry;field.dispatchEvent(new Event('change',{bubbles:true}));}
  });
 });
+</script>
+<script>
+(function () {
+  const badge = document.getElementById('book-view-badge');
+  const status = document.getElementById('book-view-status');
+  const target = document.querySelector('#books .ebook-copy h3');
+  if (!badge || !target) return;
+  let requested = false;
+  function recordView() {
+    if (requested || document.visibilityState === 'hidden') return;
+    requested = true;
+    badge.onload = function () { badge.hidden = false; status.hidden = true; };
+    badge.onerror = function () { status.textContent = 'Views counter temporarily unavailable.'; };
+    badge.src = badge.dataset.counterSrc + '&request=' + Date.now();
+  }
+  function checkVisible() {
+    const bounds = target.getBoundingClientRect();
+    if (bounds.top < window.innerHeight && bounds.bottom > 0) recordView();
+  }
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(function (entries) {
+      if (entries.some(function (entry) { return entry.isIntersecting; })) {
+        recordView();
+        if (requested) observer.disconnect();
+      }
+    }, { threshold: 0.5 });
+    observer.observe(target);
+  } else {
+    window.addEventListener('scroll', checkVisible, { passive: true });
+    window.addEventListener('resize', checkVisible);
+    checkVisible();
+  }
+  document.addEventListener('visibilitychange', checkVisible);
+})();
 </script>
 </body>
 </html>
