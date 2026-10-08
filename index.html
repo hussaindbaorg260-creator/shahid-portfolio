@@ -1355,6 +1355,47 @@ section[id]{scroll-margin-top:205px}
 @media(min-width:1400px){#home .hero-roles{flex-wrap:nowrap}#home .hero-role-badge{flex:1}}
 @media(max-width:850px){#home{padding:20px 16px}#home .hero-grid{grid-template-columns:1fr;gap:16px}#home .hero-visual{grid-row:1}#home .hero-content{grid-row:2}#home .hero-photo-wrap{width:120px;height:150px}#home .hero-name{font-size:28px}#home .hero-tagline{font-size:13px}}
 @media(max-width:400px){#home .hero-stats{gap:6px}#home .hero-stat{padding:10px 5px}#home .hero-stat .lbl{font-size:10px}#home .hero-stat .num{font-size:26px}#home .hero-buttons .btn{width:100%}}
+
+/* Refined product controls and compact spacing */
+#our-product .product-card{padding:22px}
+#our-product .product-grid{gap:20px;align-items:start}
+#our-product .product-copy>p{margin-bottom:12px;line-height:1.6}
+#our-product .product-audiences{gap:8px;margin:10px 0}
+#our-product .product-audiences span{padding:6px 12px;border-radius:20px;font-size:13px}
+#our-product .product-features{gap:8px;margin:12px 0}
+#our-product .product-features li{display:flex;align-items:center;gap:10px;padding:11px 13px;min-height:44px;border-radius:10px;border:1px solid #cfe3e8;background:linear-gradient(135deg,#f4fbfc,#edf4f8);font-size:14px;color:#082544;line-height:1.4}
+#our-product .product-features i{color:#008b8b;font-size:16px}
+#our-product .product-actions{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 8px}
+#our-product .product-actions .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:11px 17px;min-height:44px;border-radius:11px;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;transition:transform .2s,box-shadow .2s}
+#our-product .product-actions .btn-primary{background:linear-gradient(135deg,#008c95,#00aeb0);border:1px solid #008c95;color:#fff;box-shadow:0 4px 12px #008c951f}
+#our-product .product-actions .product-whatsapp{background:#effaf5;border:1px solid #71bb98;color:#146c43;box-shadow:0 3px 10px #146c4310}
+#our-product .product-actions .btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px #08254422}
+#our-product .product-actions .btn:focus-visible{outline:3px solid #082544;outline-offset:3px}
+#our-product .product-copy>p:last-child{margin:6px 0 0;font-size:12px;line-height:1.5}
+#our-product .product-details{margin-top:18px;padding-top:18px}
+#our-product .product-art{margin:0;align-self:start}
+@media(max-width:680px){#our-product .product-card{padding:16px}#our-product .product-grid{gap:16px}#our-product .product-actions .btn{width:100%}}
+
+/* Remove excessive section gaps; keep comfortable reading space */
+main>section,body>section{padding-top:36px;padding-bottom:36px}
+.section-title{margin-bottom:16px}
+.section-label{margin-bottom:6px}
+.section-subtitle{max-width:none;margin-bottom:22px}
+#home .hero-content{text-align:left}
+#home .hero-roles,#home .hero-buttons{justify-content:flex-start}
+#our-product{padding-top:28px;padding-bottom:30px}
+#our-product .product-heading{margin-bottom:14px}
+#our-product .product-heading h3{font-size:clamp(22px,2.4vw,30px);margin-bottom:6px}
+#our-product .product-tagline{margin:0;line-height:1.5;font-size:14px}
+#our-product .product-explain-grid>section{padding:0;margin:0;min-height:0}
+#our-product .product-details{margin-top:16px;padding-top:16px}
+#our-product .product-explain-grid{margin-bottom:16px;gap:20px}
+#our-product .product-benefits{gap:12px;margin:14px 0}
+#our-product .product-benefits li{padding:15px}
+#blog .blog-article{max-width:none;width:100%;padding:24px}
+#gallery .gallery-story{max-width:none;margin-bottom:18px}
+#gallery .gallery-grid{gap:16px}
+@media(max-width:680px){main>section,body>section{padding-top:26px;padding-bottom:26px}#blog .blog-article{padding:18px}#home .hero-content{text-align:left}#our-product{padding-top:22px}}
 </style>
   <meta property="og:image" content="https://hussaindbaorg260-creator.github.io/shahid-portfolio/portfolio-share.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
@@ -1362,6 +1403,25 @@ section[id]{scroll-margin-top:205px}
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="MD Shahid Hussain — Oracle Apps DBA, AI Product Management, Corporate and College Training" />
   <meta name="twitter:image" content="https://hussaindbaorg260-creator.github.io/shahid-portfolio/portfolio-share.jpg" />
+<style>
+/* Approved header: fixed identity, fourteen links, separate moving announcement. */
+#navbar .nav-inner{max-width:none;padding:0;gap:0;grid-template-columns:1fr auto;background:linear-gradient(90deg,#092440 0%,#092440e8 45%,#09244010 100%),url('portfolio-header-skyline.png') center right/cover no-repeat}
+#navbar .nav-logo{grid-column:1;grid-row:1;padding:24px max(24px,4.8vw);min-height:124px}
+#navbar .nav-logo .name{font-family:var(--font-display,Arial),sans-serif;font-size:clamp(26px,3vw,44px);font-weight:800;color:white;line-height:1.15;margin-bottom:10px}
+#navbar .nav-logo .surname{color:#09d7df}
+#navbar .nav-logo .title{font-size:clamp(12px,1.2vw,17px);line-height:1.5;color:#fff;max-width:980px}
+#navbar .header-theme{display:none}
+#navbar .nav-links{grid-column:1/-1;grid-row:2;background:#06273e;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));padding:6px 18px;gap:3px 6px;margin:0;border-top:1px solid #ffffff30}
+#navbar .nav-links a{font-size:13px;min-height:34px;gap:8px;padding:6px;border-radius:7px;white-space:nowrap}
+#navbar .nav-links a[href="#books"]{background:#ffffff10}
+#navbar .nav-links .nav-cta{background:#10b8bd;color:white}
+#navbar .nav-toggle{display:none}
+.book-announcement{font-size:13px;padding:5px 18px;min-height:32px}
+.announcement-text{animation:bookTicker 28s linear infinite}
+section[id]{scroll-margin-top:250px}
+@media(max-width:1200px){#navbar .nav-links{display:none}#navbar .nav-toggle{display:block;grid-column:2;grid-row:1;margin-right:16px}#navbar .nav-logo{padding:18px 20px;min-height:100px}#navbar .nav-logo .name{font-size:30px}#navbar .nav-logo .title{font-size:13px}section[id]{scroll-margin-top:180px}}
+@media(max-width:600px){#navbar .nav-logo{padding:14px 16px;min-height:100px}#navbar .nav-logo .name{font-size:25px}#navbar .nav-logo .title{font-size:11px;line-height:1.5}.book-announcement{font-size:12px;padding:5px 10px}#navbar .nav-mobile{max-height:55vh;overflow:auto}}
+</style>
 </head>
 
 <body>
@@ -1375,7 +1435,7 @@ section[id]{scroll-margin-top:205px}
 <nav id="navbar" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="#home" class="nav-logo" aria-label="MD Shahid Hussain – Home">
-      <span class="name">MD Shahid Hussain</span>
+      <span class="name">MD Shahid <span class="surname">Hussain</span></span>
       <span class="title">Former Director &amp; CEO | AI Product Manager &amp; Training Head | Oracle Apps DBA | RAG</span>
     </a>
     <div class="header-theme" aria-hidden="true">TECHNOLOGY &nbsp; | &nbsp; TRAINING &nbsp; | &nbsp; AI<br><span>ENTERPRISE SOLUTIONS</span></div>
@@ -1415,7 +1475,7 @@ section[id]{scroll-margin-top:205px}
     <a href="#social"     role="menuitem">Social Activities</a>
     <a href="#contact"    role="menuitem">Contact</a>
   </div>
-<div class="book-announcement" aria-label="Book announcement"><a href="#books"><span class="announcement-text"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Oracle DBA Practice Book — Coming Soon</span></a><button type="button" id="announcementPause" aria-label="Pause book announcement">Pause</button></div>
+<div class="book-announcement" aria-label="Book announcement"><a href="#books"><span class="announcement-text"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Oracle DBA Practice Book — Coming Soon &nbsp; • &nbsp; Bridging Technology, Training, and Business — Across India and Beyond.</span></a><button type="button" id="announcementPause" aria-label="Pause book announcement">Pause</button></div>
 </nav>
 
 <main id="main-content">
@@ -1449,7 +1509,7 @@ section[id]{scroll-margin-top:205px}
     </g>
   </svg><div class="hero-grid"><div class="hero-content">
 <h1 class="hero-name">MD <span>Shahid</span> Hussain</h1>
-<p class="hero-tagline">Bridging Technology, Training, and Business — Across India and Beyond.</p>
+<p class="hero-tagline">Former Director &amp; CEO | AI Product Manager &amp; Training Head | Oracle Apps DBA | RAG</p>
 <div class="hero-roles" role="list"><span class="hero-role-badge" role="listitem">Former Director &amp; CEO</span><span class="hero-role-badge" role="listitem">AI Product Manager</span><span class="hero-role-badge" role="listitem">Oracle Apps DBA</span><span class="hero-role-badge" role="listitem">Corporate Trainer</span><span class="hero-role-badge" role="listitem">RAG &amp; Prompt Engineering</span><span class="hero-role-badge" role="listitem">AI Agents &amp; Agentic AI</span></div>
 <div class="hero-stats" role="list" aria-label="Experience overview"><div class="hero-stat" role="listitem"><div class="num">15</div><div class="lbl">Years Overall IT Experience</div></div><div class="hero-stat" role="listitem"><div class="num">5+</div><div class="lbl">Years Apps DBA Experience</div></div><div class="hero-stat" role="listitem"><div class="num">5+</div><div class="lbl">Years Director &amp; CEO Experience</div></div></div>
 <div class="hero-buttons"><a href="#projects" class="btn btn-primary"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Explore My Work</a><a href="https://wa.me/919702806769?text=Hello%20Shahid%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20requirement." class="btn btn-outline" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Connect on WhatsApp</a></div>
@@ -2265,8 +2325,8 @@ section[id]{scroll-margin-top:205px}
 <div class="container"><p class="section-label">Our Product</p><h2 class="section-title" id="product-section-heading">Lead Management Solutions</h2>
 <article class="product-card"><div class="product-heading"><h3>Leads Management &amp; <span>Leads Flow</span></h3><p class="product-tagline">From Ad Campaigns to Customer Follow-Ups — Total Solution @ One Place</p></div>
 <div class="product-grid"><div class="product-copy"><p>Designed for <strong>Real Estate businesses and Training Institutes</strong>, our platform connects advertising, enquiry management, and follow-up tracking in one place. Give your team a clear view of incoming leads, who is handling them, and what needs to happen next.</p>
-<div class="product-audiences"><span>Real Estate</span><span>Training Institutes</span></div><ul class="product-features"><li>Lead Capture</li><li>Lead Assignment</li><li>Follow-up Tracking</li><li>Conversion Overview</li></ul>
-<div class="product-actions"><a class="btn btn-primary" href="https://wa.me/919702806769?text=Hello%20Shahid%2C%20I%20would%20like%20a%20demo%20of%20Lead%20Management%20%26%20Lead%20Flow.%0ABusiness%3A%20Real%20Estate%20/%20Training%20Institute%0AOrganization%3A%0ALocation%3A%0ARequirements%3A%0APreferred%20demo%20time%3A" target="_blank" rel="noopener">Request a Demo</a><a class="btn product-whatsapp" href="https://wa.me/919702806769?text=Hello%20Shahid%2C%20I%20would%20like%20to%20discuss%20Lead%20Management%20%26%20Lead%20Flow%20for%20my%20business." target="_blank" rel="noopener">Contact on WhatsApp</a></div><p><small>Share your business requirements to discuss the demo, setup, and available integrations.</small></p></div>
+<div class="product-audiences"><span>Real Estate</span><span>Training Institutes</span></div><ul class="product-features"><li><i class="fa-solid fa-inbox" aria-hidden="true"></i><span>Lead Capture</span></li><li><i class="fa-solid fa-user-check" aria-hidden="true"></i><span>Lead Assignment</span></li><li><i class="fa-solid fa-clock" aria-hidden="true"></i><span>Follow-up Tracking</span></li><li><i class="fa-solid fa-chart-line" aria-hidden="true"></i><span>Conversion Overview</span></li></ul>
+<div class="product-actions"><a class="btn btn-primary" href="https://wa.me/919702806769?text=Hello%20Shahid%2C%20I%20would%20like%20a%20demo%20of%20Lead%20Management%20%26%20Lead%20Flow.%0ABusiness%3A%20Real%20Estate%20/%20Training%20Institute%0AOrganization%3A%0ALocation%3A%0ARequirements%3A%0APreferred%20demo%20time%3A" target="_blank" rel="noopener"><i class="fa-solid fa-desktop" aria-hidden="true"></i> Request a Demo</a><a class="btn product-whatsapp" href="https://wa.me/919702806769?text=Hello%20Shahid%2C%20I%20would%20like%20to%20discuss%20Lead%20Management%20%26%20Lead%20Flow%20for%20my%20business." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Contact on WhatsApp</a></div><p><small>Share your business requirements to discuss the demo, setup, and available integrations.</small></p></div>
 <img class="product-art" src="lead-management-scene.jpg" width="1536" height="1024" loading="lazy" alt="Illustration of Dubai skyline with Burj Khalifa, real estate villas and a training classroom connected to a cloud CRM dashboard"></div><div class="product-details">
 <div class="product-explain-grid"><section><h4>Leads Flow — Simplify Your Advertising</h4><p>Create and run <strong>Facebook and Instagram ad campaigns directly through the platform</strong>, using a workflow designed for people with basic computer knowledge.</p><p><strong>Manage routine campaign activities in-house</strong>, reducing dependence on an external agency. Access campaign performance and lead reports in a <strong>clear table with one click</strong>, making results easier to understand and review.</p></section>
 <section><h4>Leads Management — Turn Enquiries into Organized Action</h4><p>Organize enquiries, assign leads to team members, track follow-ups, and review your conversion pipeline. Support a more consistent process for <strong>property enquiries, prospective buyers, course enquiries, and student admissions</strong>.</p></section></div>
