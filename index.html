@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Approved portfolio layout: 8 October 2026, latest revision 4 -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MD Shahid Hussain | Oracle Apps DBA, AI &amp; RAG Portfolio</title>
@@ -1253,6 +1254,38 @@ h2, h3, h4 { text-align:left; }
 .footer-traffic{display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px 20px;border:1px solid rgba(255,255,255,.25);border-radius:12px;background:rgba(255,255,255,.06);margin:8px 0;max-width:100%}
 .footer-traffic-title{font-weight:700;color:#fff}.footer-traffic img{display:block;max-width:100%}.footer-traffic small{font-size:11px;color:#ccd7e3;line-height:1.4;text-align:center}
 .book-view-counter{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:14px 0;font-size:.85rem;color:#082544}.book-view-counter img{max-width:100%;width:auto}.book-view-counter small{flex-basis:100%;line-height:1.5}.book-view-counter [hidden]{display:none}
+#books .book-review-button{background:#f4c553;color:#082544;border:2px solid #f4c553;font-weight:700}#books .book-review-button:hover,#books .book-review-button:focus-visible{background:#e3b23d;border-color:#e3b23d;color:#082544}
+
+/* Product showcase */
+.nav-links a.product-nav,.nav-mobile a.product-nav{background:#f4c553;color:#082544;border-radius:8px;padding:9px 12px;font-weight:700;white-space:nowrap}
+.product-card{background:#fff;border:1px solid #d9e6ec;border-radius:20px;overflow:hidden;box-shadow:0 12px 35px #08254412}
+.product-heading{padding:28px 28px 0}.product-heading h3{font-size:clamp(14px,3.1vw,36px);white-space:nowrap;line-height:1.3;color:#082544;margin:0 0 8px}.product-heading h3 span{color:#00848a}.product-tagline{color:#997324;font-weight:700;margin:0}
+.product-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:24px;padding:20px 28px 28px}.product-copy{min-width:0}.product-copy p{margin:0 0 18px}.product-audiences,.product-actions{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}.product-audiences span{padding:10px 14px;background:#e0f5f6;border-radius:10px;font-weight:600;color:#082544}.product-audiences span+span{background:#faf1df}.product-features{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;list-style:none;padding:0;margin:18px 0}.product-features li{border:1px solid #dde8ed;padding:14px;border-radius:10px;background:#f7fafc;color:#082544}.product-art{width:100%;height:auto;display:block;border-radius:14px}.product-actions .btn{white-space:normal;text-align:center}.product-actions .product-whatsapp{background:#fff;color:#00848a;border:1px solid #00848a}
+@media(max-width:680px){.product-heading{padding:20px 12px 0}.product-grid{grid-template-columns:1fr;padding:16px 12px 20px;gap:16px}.product-art{grid-row:1}.product-actions{flex-direction:column}.product-actions .btn{width:100%}.product-audiences{gap:8px}.product-audiences span{font-size:12px;padding:9px}.product-features li{padding:12px;font-size:14px}}
+
+
+/* Approved header and compact footer layout */
+#navbar{position:sticky;top:0;background:#082544}#navbar .nav-inner{display:grid;grid-template-columns:1fr auto;gap:12px;padding:16px 24px;min-height:0}#navbar .nav-logo{grid-column:1 / -1;display:block;min-width:0}#navbar .nav-logo .name{display:block;font-size:26px;color:#f4c553;margin-bottom:6px}#navbar .nav-logo .title{display:block;max-width:none;text-transform:none;letter-spacing:0;font-size:14px;line-height:1.5;color:#e3eef3;overflow-wrap:normal}#navbar .nav-links{grid-column:1 / -1;display:flex;flex-wrap:wrap;justify-content:flex-start;gap:8px 10px;min-width:0}#navbar .nav-links a{display:block;padding:7px 9px}#navbar .nav-toggle{display:none}#home{padding-top:56px;min-height:calc(100vh - 180px)}section[id]{scroll-margin-top:220px}
+.book-announcement{display:flex;align-items:center;gap:10px;background:linear-gradient(90deg,#d5b353,#ffedb0,#d5b353);padding:8px 20px;color:#082544}.book-announcement a{display:block;flex:1;overflow:hidden;color:#082544;font-weight:700}.announcement-text{display:inline-block;white-space:nowrap;animation:bookTicker 18s linear infinite}.book-announcement.paused .announcement-text{animation-play-state:paused}.book-announcement button{border:1px solid #08254466;border-radius:5px;background:transparent;color:#082544;padding:4px 8px;cursor:pointer}@keyframes bookTicker{from{transform:translateX(80vw)}to{transform:translateX(-100%)}}
+footer .footer-inner{grid-template-columns:1.05fr 1.6fr 1.1fr;gap:30px}footer .footer-brand .name{color:#f4c553}footer .footer-brand .footer-role{color:#21c4c9;max-width:none;text-align:left;font-weight:600;line-height:1.7}footer .footer-link-columns{display:grid;grid-template-columns:1fr 1fr;gap:20px}footer h5{color:#21c4c9;margin:0 0 12px;font-size:14px}footer .footer-col ul li{margin-bottom:8px}footer .footer-col h4{color:#f4c553}
+@media(max-width:1200px){#navbar .nav-logo{grid-column:1}#navbar .nav-toggle{display:block;grid-column:2;grid-row:1}#navbar .nav-links{display:none}#navbar .nav-mobile{max-height:60vh;overflow-y:auto}section[id]{scroll-margin-top:165px}}
+@media(max-width:800px){footer .footer-inner{grid-template-columns:1fr;gap:24px}footer .footer-brand{grid-column:auto}#navbar .nav-logo .name{font-size:20px}#navbar .nav-logo .title{font-size:12px}#navbar .nav-inner{padding:12px 16px}.book-announcement{padding:7px 12px;font-size:13px}#home{padding-top:32px}.footer-link-columns{gap:14px}}
+
+
+
+/* Refined layout matching approved visual */
+#navbar{background:linear-gradient(120deg,#062338,#032239 70%,#073e4d);border-bottom:1px solid #426272}
+#navbar .nav-inner{max-width:1600px;padding:22px 34px 14px;grid-template-columns:minmax(0,2.2fr) minmax(0,1fr);gap:20px}
+#navbar .nav-logo{grid-column:1;grid-row:1}#navbar .nav-logo .name{font-family:Georgia,'Times New Roman',serif;font-size:clamp(30px,3vw,46px);font-weight:700;line-height:1.1;margin-bottom:10px}#navbar .nav-logo .title{font-size:clamp(13px,1.15vw,17px);font-weight:400}
+.header-theme{grid-column:2;grid-row:1;align-self:center;text-align:center;border-left:1px solid #bc9f58;padding:18px 12px;color:#e6eef2;font-size:12px;letter-spacing:2px;line-height:1.8}.header-theme span{color:#f4c553;font-size:11px}
+#navbar .nav-links{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px 10px;border-top:1px solid #ffffff25;padding-top:14px;width:100%}
+#navbar .nav-links li{min-width:0}#navbar .nav-links a{display:flex;align-items:center;gap:10px;justify-content:center;font-size:14px;padding:10px 6px;white-space:normal;line-height:1.4;min-height:44px}#navbar .nav-links i{font-size:20px;color:#dbe8ed;flex-shrink:0}#navbar .nav-links .product-nav{background:linear-gradient(135deg,#ffe99a,#f4c553);color:#082544}#navbar .nav-links .product-nav i{color:#082544}#navbar .nav-links a[href="#home"]{border-bottom:2px solid #f4c553;border-radius:0}
+.book-announcement{padding:10px 24px;font-size:16px;min-height:44px}.announcement-text i{margin-right:12px}#announcementPause{font-size:12px}section[id]{scroll-margin-top:280px}
+footer{background:linear-gradient(120deg,#062338,#032239 70%,#073442);padding:34px 28px 20px}footer .footer-inner{max-width:1500px;grid-template-columns:1.05fr 1.6fr 1.1fr;gap:0}footer .footer-brand{padding-right:24px}footer .footer-brand .name{font-family:Georgia,'Times New Roman',serif;font-size:30px;font-weight:700;line-height:1.2}footer .footer-brand .footer-role{font-size:16px;font-weight:500;line-height:1.7}footer .footer-col{padding:0 24px;border-left:1px solid #ffffff40}footer .footer-col h4{font-family:Georgia,'Times New Roman',serif;font-size:24px;text-transform:none;letter-spacing:0;margin-bottom:16px}footer h5{font-size:15px;line-height:1.4}footer .footer-link-columns{gap:16px}footer .footer-link-columns>div+div{border-left:1px solid #ffffff30;padding-left:16px}footer .footer-col ul li{margin-bottom:10px}footer .footer-col ul li a{font-size:14px;line-height:1.5;display:flex;gap:10px;color:#e2e9ef}footer .footer-col ul li a:before{content:'↗';color:#bad7e5}footer .social-links{gap:12px}footer .social-link{width:42px;height:42px;border:1px solid #ffffff50;background:#0b7183;color:white}footer .footer-bottom{max-width:1500px;margin:24px auto 0;padding-top:18px}
+@media(max-width:1200px){#navbar .nav-inner{grid-template-columns:1fr auto;padding:16px 20px;gap:10px}#navbar .nav-links{display:none}.header-theme{display:none}#navbar .nav-logo{grid-column:1}#navbar .nav-toggle{grid-column:2;display:block}#navbar .nav-logo .name{font-size:30px}#navbar .nav-logo .title{font-size:13px}section[id]{scroll-margin-top:180px}}
+@media(max-width:850px){footer .footer-inner{grid-template-columns:1fr;gap:24px}footer .footer-brand{padding:0}footer .footer-col{border-left:0;border-top:1px solid #ffffff30;padding:20px 0 0}footer .footer-brand .name{font-size:27px}footer .footer-col h4{font-size:23px}footer .footer-bottom{flex-wrap:wrap;gap:18px}}
+@media(max-width:480px){#navbar .nav-logo .name{font-size:24px}#navbar .nav-logo .title{font-size:12px}#navbar .nav-inner{padding:12px 16px}footer{padding:28px 18px 18px}footer .footer-role{font-size:14px!important}footer .footer-col ul li a{font-size:13px}footer h5{font-size:13px}.book-announcement{font-size:14px;padding:8px 12px}}
+
 </style>
   <meta property="og:image" content="https://hussaindbaorg260-creator.github.io/shahid-portfolio/portfolio-share.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
@@ -1274,22 +1307,24 @@ h2, h3, h4 { text-align:left; }
   <div class="nav-inner">
     <a href="#home" class="nav-logo" aria-label="MD Shahid Hussain – Home">
       <span class="name">MD Shahid Hussain</span>
-      <span class="title">Former Director &amp; CEO | Oracle Apps DBA | Technical Writer | AI Product Management</span>
+      <span class="title">AI Product Manager &amp; Training Head | Oracle Apps DBA | Corporate &amp; College Training</span>
     </a>
+    <div class="header-theme" aria-hidden="true">TECHNOLOGY &nbsp; | &nbsp; TRAINING &nbsp; | &nbsp; AI<br><span>ENTERPRISE SOLUTIONS</span></div>
     <ul class="nav-links" role="list">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#business">Business</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#service-enquiries">Services &amp; Enquiries</a></li>
-      <li><a href="#demo-classes">Demo Classes</a></li>
-      <li><a href="#books">Books</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#social">Social</a></li>
-      <li><a href="#contact" class="nav-cta">Contact</a></li>
+      <li><a href="#home"><i class="fa-solid fa-house" aria-hidden="true"></i><span>Home</span></a></li>
+      <li><a href="#about"><i class="fa-solid fa-user" aria-hidden="true"></i><span>About</span></a></li>
+      <li><a href="#experience"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><span>Experience</span></a></li>
+      <li><a href="#business"><i class="fa-solid fa-chart-simple" aria-hidden="true"></i><span>Business</span></a></li>
+      <li><a href="#services"><i class="fa-solid fa-gears" aria-hidden="true"></i><span>Services</span></a></li>
+      <li><a href="#projects"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>Projects</span></a></li>
+      <li><a href="#gallery"><i class="fa-solid fa-images" aria-hidden="true"></i><span>Gallery</span></a></li>
+      <li><a href="#service-enquiries"><i class="fa-solid fa-comments" aria-hidden="true"></i><span>Services &amp; Enquiries</span></a></li>
+      <li><a href="#demo-classes"><i class="fa-solid fa-desktop" aria-hidden="true"></i><span>Demo Classes</span></a></li>
+      <li><a href="#books"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span>Books</span></a></li>
+      <li><a href="#our-product" class="product-nav"><i class="fa-solid fa-cube" aria-hidden="true"></i><span>OUR PRODUCT</span></a></li>
+      <li><a href="#blog"><i class="fa-solid fa-file-lines" aria-hidden="true"></i><span>Blog</span></a></li>
+      <li><a href="#social"><i class="fa-solid fa-share-nodes" aria-hidden="true"></i><span>Social</span></a></li>
+      <li><a href="#contact" class="nav-cta"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Contact</span></a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="navMobile">
       <i class="fa-solid fa-bars" aria-hidden="true"></i>
@@ -1306,10 +1341,12 @@ h2, h3, h4 { text-align:left; }
     <a href="#service-enquiries" role="menuitem">Services &amp; Enquiries</a>
     <a href="#demo-classes" role="menuitem">Demo Classes</a>
     <a href="#books" role="menuitem">Books &amp; eBooks</a>
+    <a href="#our-product" class="product-nav" role="menuitem">OUR PRODUCT</a>
     <a href="#blog"       role="menuitem">Blog</a>
     <a href="#social"     role="menuitem">Social Activities</a>
     <a href="#contact"    role="menuitem">Contact</a>
   </div>
+<div class="book-announcement" aria-label="Book announcement"><a href="#books"><span class="announcement-text"><i class="fa-solid fa-book-open" aria-hidden="true"></i> Oracle DBA Practice Book — Coming Soon</span></a><button type="button" id="announcementPause" aria-label="Pause book announcement">Pause</button></div>
 </nav>
 
 <main id="main-content">
@@ -2212,15 +2249,25 @@ h2, h3, h4 { text-align:left; }
 <div class="book-view-counter" aria-label="Book section views">
 <img id="book-view-badge" data-counter-src="https://hits.sh/hussaindbaorg260-creator.github.io/shahid-portfolio/books-20261007.svg?label=Book%20Section%20Views&amp;color=00a8a8&amp;labelColor=082544" alt="Book section views counter" height="24" hidden referrerpolicy="no-referrer">
 <span id="book-view-status" role="status">Views counter loads when this book is viewed.</span>
-<small>Tracking from 7 October 2026 · Repeat visits may be included.</small>
+
 </div>
 <div class="ebook-actions">
 <a class="btn btn-outline" href="Oracle_DBA_Practice_Free_Sample.pdf" target="_blank" rel="noopener">Read Free Sample</a>
 <a class="btn btn-primary" href="https://wa.me/919702806769?text=Hello%20Shahid%2C%20I%20would%20like%20to%20buy%20Oracle%20DBA%20Practice%3A%20An%20End-to-End%20Guide%20for%20Beginners%20%28PDF/eBook%29%20for%20%E2%82%B9199.%20Please%20share%20the%20payment%20details%20and%20PDF%20delivery%20process." target="_blank" rel="noopener">Buy eBook ₹199 via WhatsApp</a>
+<a class="btn book-review-button" href="https://wa.me/919702806769?text=Hello%20Shahid%2C%20I%20would%20like%20to%20share%20my%20review%20of%20Oracle%20DBA%20Practice.%0A%0AI%20read%3A%20Free%20sample%20%2F%20Full%20book%0ARating%20%281-5%29%3A%0AMy%20feedback%3A%0AName%20%28optional%29%3A%0AMay%20you%20publish%20this%20review%20on%20your%20portfolio%3F%20Yes%20%2F%20No" target="_blank" rel="noopener" aria-label="Write a book review via WhatsApp">☆ Write a Review</a>
 </div>
+<p class="ebook-note">Share feedback on the free sample or full book via WhatsApp. Reviews are published only with your permission.</p>
 <p class="ebook-note">Purchase through WhatsApp: request payment details, complete payment, and receive the PDF after payment is confirmed. Delivery is handled manually; this button opens a purchase enquiry.</p>
 <p class="ebook-note">Examples in the notes include Oracle 11g and 12c environments. The free sample includes contents and a startup/shutdown excerpt.</p>
 </div></div></div></section>
+
+<section id="our-product" class="bg-light" aria-labelledby="product-section-heading">
+<div class="container"><p class="section-label">Our Product</p><h2 class="section-title" id="product-section-heading">Lead Management Solutions</h2>
+<article class="product-card"><div class="product-heading"><h3>Lead Management &amp; <span>Lead Flow</span></h3><p class="product-tagline">Total Solution @ one Place</p></div>
+<div class="product-grid"><div class="product-copy"><p>Lead management solutions for <strong>Real Estate businesses and Training Institutes</strong>. Organize enquiries, assign leads, track follow-ups, and review your conversion pipeline.</p>
+<div class="product-audiences"><span>Real Estate</span><span>Training Institutes</span></div><ul class="product-features"><li>Lead Capture</li><li>Lead Assignment</li><li>Follow-up Tracking</li><li>Conversion Overview</li></ul>
+<div class="product-actions"><a class="btn btn-primary" href="https://wa.me/919702806769?text=Hello%20Shahid%2C%20I%20would%20like%20a%20demo%20of%20Lead%20Management%20%26%20Lead%20Flow.%0ABusiness%3A%20Real%20Estate%20/%20Training%20Institute%0AOrganization%3A%0ALocation%3A%0ARequirements%3A%0APreferred%20demo%20time%3A" target="_blank" rel="noopener">Request a Demo</a><a class="btn product-whatsapp" href="https://wa.me/919702806769?text=Hello%20Shahid%2C%20I%20would%20like%20to%20discuss%20Lead%20Management%20%26%20Lead%20Flow%20for%20my%20business." target="_blank" rel="noopener">Contact on WhatsApp</a></div><p><small>Share your business requirements to discuss the demo, setup, and available integrations.</small></p></div>
+<img class="product-art" src="lead-management-scene.jpg" width="1536" height="1024" loading="lazy" alt="Illustration of Dubai skyline with Burj Khalifa, real estate villas and a training classroom connected to a cloud CRM dashboard"></div></article></div></section>
 
 <section id="blog" aria-labelledby="blog-heading">
   <div class="container">
@@ -2622,10 +2669,7 @@ h2, h3, h4 { text-align:left; }
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="name">MD Shahid Hussain</div>
-      <p>
-        Former Director &amp; CEO · Oracle Apps DBA · Corporate Training Background<br>
-        Currently exploring AI Product Management and RAG.
-      </p>
+<p class="footer-role">Former Director &amp; CEO<br>Oracle Apps DBA | Technical Writer<br>AI Product Management</p>
       <div class="social-links" style="margin-top:20px;">
         <a href="https://www.linkedin.com/in/md-shahid-hussain-760bba194/" class="social-link" aria-label="LinkedIn profile" target="_blank" rel="noopener">
           <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
@@ -2640,25 +2684,12 @@ h2, h3, h4 { text-align:left; }
       </div>
     </div>
 
-    <div class="footer-col">
-      <h4>Navigate</h4>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#business">Business Leadership</a></li>
-        <li><a href="#services">Areas of Experience</a></li>
-        <li><a href="#digital-media">Digital Media Background</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#books">Books</a></li>
-      <li><a href="#blog">Blog</a></li>
-        <li><a href="#social">Social Activities</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+    <div class="footer-col footer-quick"><h4>Quick Links</h4><div class="footer-link-columns"><div><h5>Experience &amp; Services</h5><ul>
+<li><a href="#about">About Me</a></li><li><a href="#experience">Experience</a></li><li><a href="#business">Business Leadership</a></li><li><a href="#services">Areas of Experience</a></li><li><a href="#digital-media">Digital Media Background</a></li><li><a href="#projects">Projects</a></li><li><a href="#gallery">Gallery</a></li></ul></div>
+<div><h5>Resources &amp; Connect</h5><ul><li><a href="#books">Books</a></li><li><a href="#our-product">OUR PRODUCT</a></li><li><a href="#demo-classes">Demo Classes</a></li><li><a href="#blog">Blog</a></li><li><a href="#social">Social Activities</a></li><li><a href="#contact">Contact</a></li></ul></div></div></div>
 
     <div class="footer-col">
-      <h4>Previous Companies</h4>
+      <h4>Professional Background</h4>
       <ul>
         <li><a href="#business">ANT GLOBAL SOFT PVT LTD</a></li>
         <li><a href="#business">AMOLI JEWELLERS PVT LTD</a></li>
@@ -2955,6 +2986,10 @@ document.querySelectorAll('[data-enquiry]').forEach(function(link){
   }
   document.addEventListener('visibilitychange', checkVisible);
 })();
+</script>
+<script>
+const announcementPause = document.getElementById('announcementPause');
+announcementPause.addEventListener('click', () => { const paused = announcementPause.parentElement.classList.toggle('paused'); announcementPause.textContent = paused ? 'Play' : 'Pause'; announcementPause.setAttribute('aria-label', paused ? 'Play book announcement' : 'Pause book announcement'); });
 </script>
 </body>
 </html>
