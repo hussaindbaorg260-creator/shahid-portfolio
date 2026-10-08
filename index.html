@@ -1262,6 +1262,15 @@ h2, h3, h4 { text-align:left; }
 .product-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:24px;padding:20px 28px 28px}.product-copy{min-width:0}.product-copy p{margin:0 0 18px}.product-audiences,.product-actions{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}.product-audiences span{padding:10px 14px;background:#e0f5f6;border-radius:10px;font-weight:600;color:#082544}.product-audiences span+span{background:#faf1df}.product-features{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;list-style:none;padding:0;margin:18px 0}.product-features li{border:1px solid #dde8ed;padding:14px;border-radius:10px;background:#f7fafc;color:#082544}.product-art{width:100%;height:auto;display:block;border-radius:14px}.product-actions .btn{white-space:normal;text-align:center}.product-actions .product-whatsapp{background:#fff;color:#00848a;border:1px solid #00848a}
 @media(max-width:680px){.product-heading{padding:20px 12px 0}.product-grid{grid-template-columns:1fr;padding:16px 12px 20px;gap:16px}.product-art{grid-row:1}.product-actions{flex-direction:column}.product-actions .btn{width:100%}.product-audiences{gap:8px}.product-audiences span{font-size:12px;padding:9px}.product-features li{padding:12px;font-size:14px}}
 
+
+/* Approved header and compact footer layout */
+#navbar{position:sticky;top:0;background:#082544}#navbar .nav-inner{display:grid;grid-template-columns:1fr auto;gap:12px;padding:16px 24px;min-height:0}#navbar .nav-logo{grid-column:1 / -1;display:block;min-width:0}#navbar .nav-logo .name{display:block;font-size:26px;color:#f4c553;margin-bottom:6px}#navbar .nav-logo .title{display:block;max-width:none;text-transform:none;letter-spacing:0;font-size:14px;line-height:1.5;color:#e3eef3;overflow-wrap:normal}#navbar .nav-links{grid-column:1 / -1;display:flex;flex-wrap:wrap;justify-content:flex-start;gap:8px 10px;min-width:0}#navbar .nav-links a{display:block;padding:7px 9px}#navbar .nav-toggle{display:none}#home{padding-top:56px;min-height:calc(100vh - 180px)}section[id]{scroll-margin-top:220px}
+.book-announcement{display:flex;align-items:center;gap:10px;background:linear-gradient(90deg,#d5b353,#ffedb0,#d5b353);padding:8px 20px;color:#082544}.book-announcement a{display:block;flex:1;overflow:hidden;color:#082544;font-weight:700}.announcement-text{display:inline-block;white-space:nowrap;animation:bookTicker 18s linear infinite}.book-announcement:hover .announcement-text,.book-announcement:focus-within .announcement-text,.book-announcement.paused .announcement-text{animation-play-state:paused}.book-announcement button{border:1px solid #08254466;border-radius:5px;background:transparent;color:#082544;padding:4px 8px;cursor:pointer}@keyframes bookTicker{from{transform:translateX(80vw)}to{transform:translateX(-100%)}}
+footer .footer-inner{grid-template-columns:1.05fr 1.6fr 1.1fr;gap:30px}footer .footer-brand .name{color:#f4c553}footer .footer-brand .footer-role{color:#21c4c9;max-width:none;text-align:left;font-weight:600;line-height:1.7}footer .footer-link-columns{display:grid;grid-template-columns:1fr 1fr;gap:20px}footer h5{color:#21c4c9;margin:0 0 12px;font-size:14px}footer .footer-col ul li{margin-bottom:8px}footer .footer-col h4{color:#f4c553}
+@media(max-width:1200px){#navbar .nav-logo{grid-column:1}#navbar .nav-toggle{display:block;grid-column:2;grid-row:1}#navbar .nav-links{display:none}#navbar .nav-mobile{max-height:60vh;overflow-y:auto}section[id]{scroll-margin-top:165px}}
+@media(max-width:800px){footer .footer-inner{grid-template-columns:1fr;gap:24px}footer .footer-brand{grid-column:auto}#navbar .nav-logo .name{font-size:20px}#navbar .nav-logo .title{font-size:12px}#navbar .nav-inner{padding:12px 16px}.book-announcement{padding:7px 12px;font-size:13px}#home{padding-top:32px}.footer-link-columns{gap:14px}}
+@media(prefers-reduced-motion:reduce){.announcement-text{animation:none;white-space:normal}#announcementPause{display:none}}
+
 </style>
   <meta property="og:image" content="https://hussaindbaorg260-creator.github.io/shahid-portfolio/portfolio-share.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
@@ -1283,7 +1292,7 @@ h2, h3, h4 { text-align:left; }
   <div class="nav-inner">
     <a href="#home" class="nav-logo" aria-label="MD Shahid Hussain – Home">
       <span class="name">MD Shahid Hussain</span>
-      <span class="title">Former Director &amp; CEO | Oracle Apps DBA | Technical Writer | AI Product Management</span>
+      <span class="title">AI Product Manager &amp; Training Head | Oracle Apps DBA | Corporate &amp; College Training</span>
     </a>
     <ul class="nav-links" role="list">
       <li><a href="#home">Home</a></li>
@@ -1321,6 +1330,7 @@ h2, h3, h4 { text-align:left; }
     <a href="#social"     role="menuitem">Social Activities</a>
     <a href="#contact"    role="menuitem">Contact</a>
   </div>
+<div class="book-announcement" aria-label="Book announcement"><a href="#books"><span class="announcement-text">📘 Oracle DBA Practice Book — Coming Soon</span></a><button type="button" id="announcementPause" aria-label="Pause book announcement">Pause</button></div>
 </nav>
 
 <main id="main-content">
@@ -2643,10 +2653,7 @@ h2, h3, h4 { text-align:left; }
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="name">MD Shahid Hussain</div>
-      <p>
-        Former Director &amp; CEO · Oracle Apps DBA · Corporate Training Background<br>
-        Currently exploring AI Product Management and RAG.
-      </p>
+<p class="footer-role">Former Director &amp; CEO<br>Oracle Apps DBA | Technical Writer<br>AI Product Management</p>
       <div class="social-links" style="margin-top:20px;">
         <a href="https://www.linkedin.com/in/md-shahid-hussain-760bba194/" class="social-link" aria-label="LinkedIn profile" target="_blank" rel="noopener">
           <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
@@ -2661,23 +2668,9 @@ h2, h3, h4 { text-align:left; }
       </div>
     </div>
 
-    <div class="footer-col">
-      <h4>Navigate</h4>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#business">Business Leadership</a></li>
-        <li><a href="#services">Areas of Experience</a></li>
-        <li><a href="#digital-media">Digital Media Background</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#books">Books</a></li>
-      <li><a href="#our-product" class="product-nav">OUR PRODUCT</a></li>
-      <li><a href="#blog">Blog</a></li>
-        <li><a href="#social">Social Activities</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+    <div class="footer-col footer-quick"><h4>Quick Links</h4><div class="footer-link-columns"><div><h5>Experience &amp; Services</h5><ul>
+<li><a href="#about">About Me</a></li><li><a href="#experience">Experience</a></li><li><a href="#business">Business Leadership</a></li><li><a href="#services">Areas of Experience</a></li><li><a href="#digital-media">Digital Media Background</a></li><li><a href="#projects">Projects</a></li><li><a href="#gallery">Gallery</a></li></ul></div>
+<div><h5>Resources &amp; Connect</h5><ul><li><a href="#books">Books</a></li><li><a href="#our-product">OUR PRODUCT</a></li><li><a href="#demo-classes">Demo Classes</a></li><li><a href="#blog">Blog</a></li><li><a href="#social">Social Activities</a></li><li><a href="#contact">Contact</a></li></ul></div></div></div>
 
     <div class="footer-col">
       <h4>Previous Companies</h4>
@@ -2977,6 +2970,10 @@ document.querySelectorAll('[data-enquiry]').forEach(function(link){
   }
   document.addEventListener('visibilitychange', checkVisible);
 })();
+</script>
+<script>
+const announcementPause = document.getElementById('announcementPause');
+announcementPause.addEventListener('click', () => { const paused = announcementPause.parentElement.classList.toggle('paused'); announcementPause.textContent = paused ? 'Play' : 'Pause'; announcementPause.setAttribute('aria-label', paused ? 'Play book announcement' : 'Pause book announcement'); });
 </script>
 </body>
 </html>
