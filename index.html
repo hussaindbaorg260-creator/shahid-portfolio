@@ -1443,7 +1443,14 @@ section[id]{scroll-margin-top:250px}
 #our-product .product-more summary{cursor:pointer;color:#007f8b;font-weight:700;padding:10px 0}
 #our-product .product-closing{font-size:13px;margin:8px 0 0}
 @media(max-width:680px){#our-product .product-grid{grid-template-columns:1fr;gap:16px}#our-product .product-art{grid-row:1;height:auto;max-height:none}#our-product .product-heading h3{font-size:25px}}
-</style><style>#navbar .nav-inner{background-position:center bottom}.approved-blog-preview{display:flex;align-items:center;justify-content:space-between;gap:16px;background:#f5faff;border:1px solid #d7e8ee;border-radius:14px;padding:18px 24px;margin:0 auto 20px}.approved-blog-preview h3{font-size:22px;margin:3px 0}.approved-blog-preview p{font-size:13px;margin:0}@media(max-width:600px){.approved-blog-preview{margin:0 16px 16px;flex-wrap:wrap;padding:16px}}</style></head>
+</style><style>#navbar .nav-inner{background-position:center bottom}.approved-blog-preview{display:flex;align-items:center;justify-content:space-between;gap:16px;background:#f5faff;border:1px solid #d7e8ee;border-radius:14px;padding:18px 24px;margin:0 auto 20px}.approved-blog-preview h3{font-size:22px;margin:3px 0}.approved-blog-preview p{font-size:13px;margin:0}@media(max-width:600px){.approved-blog-preview{margin:0 16px 16px;flex-wrap:wrap;padding:16px}}</style><style>
+#books .book-share-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#0f766e;color:#fff;border:2px solid #0f766e;cursor:pointer;font:inherit;font-weight:700;min-height:44px}
+#books .book-share-button:hover{background:#115e59;border-color:#115e59}
+#books .book-share-button:focus-visible{outline:3px solid #f4c553;outline-offset:3px}
+#books .ebook-actions{flex-wrap:wrap;gap:10px}
+@media(max-width:480px){#books .book-share-button{width:100%}}
+</style>
+</head>
 
 <body>
 
@@ -2349,8 +2356,10 @@ section[id]{scroll-margin-top:250px}
 <div class="ebook-actions">
 <a class="btn btn-outline" href="Oracle_DBA_Practice_Free_Sample_An-End-to-End_Beginners_Guide.pdf.pdf" target="_blank" rel="noopener">Read Free Sample</a>
 <a class="btn btn-primary" href="https://wa.me/919702806769?text=Hello%20Shahid%2C%20I%20would%20like%20to%20buy%20Oracle%20DBA%20Practice%3A%20An%20End-to-End%20Guide%20for%20Beginners%20%28PDF/eBook%29%20for%20%E2%82%B9199.%20Please%20share%20the%20payment%20details%20and%20PDF%20delivery%20process." target="_blank" rel="noopener">Buy eBook ₹199 via WhatsApp</a>
+<button class="btn book-share-button" id="share-book-button" type="button" aria-label="Share Oracle DBA Practice book page"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg> Share This Book</button>
 <a class="btn book-review-button" href="https://wa.me/919702806769?text=Hello%20Shahid%2C%20I%20would%20like%20to%20share%20my%20review%20of%20Oracle%20DBA%20Practice.%0A%0AI%20read%3A%20Free%20sample%20%2F%20Full%20book%0ARating%20%281-5%29%3A%0AMy%20feedback%3A%0AName%20%28optional%29%3A%0AMay%20you%20publish%20this%20review%20on%20your%20portfolio%3F%20Yes%20%2F%20No" target="_blank" rel="noopener" aria-label="Write a book review via WhatsApp">☆ Write a Review</a>
 </div>
+<p id="book-share-status" class="ebook-note" role="status" aria-live="polite" hidden></p>
 <p class="ebook-note">Share feedback on the free sample or full book via WhatsApp. Reviews are published only with your permission.</p>
 <p class="ebook-note">Purchase through WhatsApp: request payment details, complete payment, and receive the PDF after payment is confirmed. Delivery is handled manually; this button opens a purchase enquiry.</p>
 <p class="ebook-note">Examples in the notes include Oracle 11g and 12c environments. The 15-page free sample includes the cover, English and Hinglish Preface, full-book Index, and introductory Oracle installation pages.</p>
@@ -3077,6 +3086,35 @@ document.querySelectorAll('[data-enquiry]').forEach(function(link){
 <script>
 const announcementPause = document.getElementById('announcementPause');
 announcementPause.addEventListener('click', () => { const paused = announcementPause.parentElement.classList.toggle('paused'); announcementPause.textContent = paused ? 'Play' : 'Pause'; announcementPause.setAttribute('aria-label', paused ? 'Play book announcement' : 'Pause book announcement'); });
+</script>
+<script id="book-share-script">
+(function () {
+  const button = document.getElementById('share-book-button');
+  const status = document.getElementById('book-share-status');
+  if (!button || !status) return;
+  const url = 'https://hussaindbaorg260-creator.github.io/shahid-portfolio/#books';
+  const data = {
+    title: 'Oracle DBA Practice: An End-to-End Guide for Beginners',
+    text: 'Explore Oracle DBA Practice by S³ Academy and read the free 15-page sample.',
+    url: url
+  };
+  function announce(message) { status.hidden = false; status.textContent = message; }
+  button.addEventListener('click', async function () {
+    status.hidden = true;
+    if (typeof navigator.share === 'function') {
+      try { await navigator.share(data); announce('Book page shared.'); return; }
+      catch (error) { if (error && error.name === 'AbortError') return; }
+    }
+    try {
+      if (!navigator.clipboard || !navigator.clipboard.writeText) throw new Error('Clipboard unavailable');
+      await navigator.clipboard.writeText(url);
+      announce('Book link copied. Paste it into WhatsApp, LinkedIn, or any message.');
+    } catch (error) {
+      window.prompt('Copy this book link to share:', url);
+      announce('Select and copy the book link from the dialog.');
+    }
+  });
+})();
 </script>
 </body>
 </html>
