@@ -1841,6 +1841,7 @@ section[id]{scroll-margin-top:250px}
             <a class="btn btn-primary promo-cta" href="https://wa.me/918282898931?text=Hello%20Shahid%2C%20I%20would%20like%20to%20register%20for%20TechZone%20Academy%27s%20Free%20Offline%20Demo%20Session%20on%20Data%20Science%2C%20Data%20Analytics%20%26%20AI%2FML%20on%20Saturday%2C%2017%20October%202026%20at%202%3A00%20PM%20IST%20at%20Lakdikapul%2C%20Hyderabad." target="_blank" rel="noopener">Register for Free Demo</a>
             <a class="btn promo-directions-link" href="https://www.google.com/maps/dir/?api=1&destination=Second+Floor%2C+Chicha%27s+Restaurant+Lane%2C+P+%26+T+Officers+Colony%2C+Veer+Nagar%2C+Lakdikapul%2C+Hyderabad%2C+Telangana+500004" target="_blank" rel="noopener" style="background:#0d9488;border:1px solid #0d9488;color:#ffffff;display:inline-flex;align-items:center;gap:6px;"><i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i> Get Directions</a>
             <a class="btn promo-page-link" href="promotions/techzone-demo.html" style="background:#f1f5f9;border:1px solid #cbd5e1;color:#1e293b;display:inline-flex;align-items:center;gap:6px;"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> View Event Page</a>
+            <button type="button" class="btn promo-share-btn" onclick="shareTechZonePromotion()" style="background:#f8fafc;border:1px solid #cbd5e1;color:#1e293b;display:inline-flex;align-items:center;gap:6px;cursor:pointer;"><i class="fa-solid fa-share-nodes" aria-hidden="true"></i> Share Promotion</button>
           </div>
         </div>
       </article>
@@ -3470,6 +3471,26 @@ async function shareDigitalDemo(button){
     checkPromotionExpiry();
   }
 })();
+
+function shareTechZonePromotion() {
+  var url = 'https://hussaindbaorg260-creator.github.io/shahid-portfolio/promotions/techzone-demo.html';
+  var shareData = {
+    title: 'FREE OFFLINE DEMO SESSION: Data Science, Data Analytics & AI/ML | TechZone Academy',
+    text: 'Join senior instructor Mr. Shabaz (25+ years of training experience) for a free introductory session covering essential concepts, tools, and career opportunities in Data Science, Data Analytics, and AI/ML at TechZone Academy, Lakdikapul, Hyderabad on Saturday, 17 October 2026, 2:00 PM IST.',
+    url: url
+  };
+  if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+    navigator.share(shareData).catch(function(err) {});
+  } else if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(url).then(function() {
+      alert('Promotion link copied to clipboard:\n' + url);
+    }).catch(function() {
+      prompt('Copy this promotion link to share:', url);
+    });
+  } else {
+    prompt('Copy this promotion link to share:', url);
+  }
+}
 </script>
 </body>
 </html>

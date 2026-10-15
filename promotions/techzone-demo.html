@@ -490,7 +490,7 @@
               <i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i> Get Directions
             </a>
             <button type="button" class="btn btn-secondary" id="btn-share" onclick="shareEventPage()">
-              <i class="fa-solid fa-share-nodes" aria-hidden="true"></i> Share Event
+              <i class="fa-solid fa-share-nodes" aria-hidden="true"></i> Share Promotion
             </button>
           </div>
         </div>
@@ -566,12 +566,13 @@
       }
     })();
 
-    // Share Event handler
+    // Share Promotion handler
     function shareEventPage() {
+      var promoUrl = 'https://hussaindbaorg260-creator.github.io/shahid-portfolio/promotions/techzone-demo.html';
       var shareData = {
         title: 'FREE OFFLINE DEMO SESSION: Data Science, Data Analytics & AI/ML | TechZone Academy',
         text: 'Join senior instructor Mr. Shabaz (25+ years of training experience) for a free introductory session covering essential concepts, tools, and career opportunities in Data Science, Data Analytics, and AI/ML at TechZone Academy, Lakdikapul, Hyderabad on Saturday, 17 October 2026, 2:00 PM IST. Please visit the academy to attend this demo in person.',
-        url: window.location.href
+        url: promoUrl
       };
       if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
         navigator.share(shareData).catch(function(err) {
@@ -583,7 +584,7 @@
     }
 
     function copyFallback() {
-      var url = window.location.href;
+      var url = 'https://hussaindbaorg260-creator.github.io/shahid-portfolio/promotions/techzone-demo.html';
       if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(url).then(showToast).catch(function() {
           prompt('Copy this promotion link to share:', url);
