@@ -1241,14 +1241,25 @@ h2, h3, h4 { text-align:left; }
 
 
 /* Book preview and WhatsApp purchase */
-#books .ebook-actions .btn-outline{color:#082544;border:2px solid #082544;background:#fff;opacity:1}
-#books .ebook-actions .btn-outline:hover,#books .ebook-actions .btn-outline:focus-visible{background:#082544;color:#fff}
+#books .ebook-sample-action .btn-outline,#books .ebook-actions .btn-outline{color:#082544;border:2px solid #082544;background:#fff;opacity:1}
+#books .ebook-sample-action .btn-outline:hover,#books .ebook-sample-action .btn-outline:focus-visible,#books .ebook-actions .btn-outline:hover,#books .ebook-actions .btn-outline:focus-visible{background:#082544;color:#fff}
 
 .ebook-card{display:grid;grid-template-columns:minmax(220px,300px) minmax(0,1fr);gap:32px;align-items:center;margin-top:24px;padding:28px;border:1px solid rgba(179,147,77,.35);border-radius:20px;background:rgba(255,255,255,.035)}
 .ebook-cover{display:block;width:100%;height:auto;max-width:300px;margin:auto;border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.22)}
 .ebook-copy h3{font-size:clamp(1.4rem,3vw,2rem);line-height:1.25;margin:0 0 12px}.ebook-copy p{text-align:left!important;margin:12px 0}.ebook-price{font-size:1.9rem;font-weight:800;color:var(--gold,#c6a45c)}
+.ebook-sample-action{margin:18px 0 12px}
+.ebook-sample-action .btn{white-space:normal;text-align:center}
+.ebook-purchase-section{margin:16px 0 20px}
+.ebook-purchase-buttons{display:flex;flex-direction:row;flex-wrap:wrap;gap:12px;align-items:center}
+.ebook-purchase-buttons .btn{white-space:normal;text-align:center;font-weight:700}
+#books .ebook-purchase-buttons .btn-primary{background:#00858b;border:2px solid #00858b;color:#fff;min-height:44px}
+#books .ebook-purchase-buttons .btn-primary:hover{background:#006f74;border-color:#006f74}
+#books .ebook-purchase-buttons .btn-primary:focus-visible{outline:3px solid #f4c553;outline-offset:3px}
+.ebook-purchase-note{font-size:.9rem;opacity:.9;margin-top:10px;line-height:1.5;color:var(--dark-text,#1f2937)}
+.ebook-secondary-actions{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}
+.ebook-secondary-actions .btn{white-space:normal;text-align:center}
 .ebook-actions{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}.ebook-actions .btn{white-space:normal;text-align:center}.ebook-note{font-size:.9rem;opacity:.85;line-height:1.6}
-@media(max-width:680px){.ebook-card{grid-template-columns:1fr;gap:22px;padding:20px}.ebook-cover{max-width:230px}.ebook-actions{flex-direction:column}.ebook-actions .btn{width:100%;justify-content:center}}
+@media(max-width:680px){.ebook-card{grid-template-columns:1fr;gap:22px;padding:20px}.ebook-cover{max-width:230px}.ebook-sample-action .btn{width:100%;justify-content:center}.ebook-purchase-buttons{flex-direction:column;gap:10px}.ebook-purchase-buttons .btn{width:100%;justify-content:center}.ebook-secondary-actions{flex-direction:column;gap:10px}.ebook-secondary-actions .btn{width:100%;justify-content:center}.ebook-actions{flex-direction:column}.ebook-actions .btn{width:100%;justify-content:center}}
 
 
 .footer-traffic{display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px 20px;border:1px solid rgba(255,255,255,.25);border-radius:12px;background:rgba(255,255,255,.06);margin:8px 0;max-width:100%}
@@ -2355,28 +2366,42 @@ section[id]{scroll-margin-top:250px}
 <p class="section-label">Practical Learning Resources</p>
 <h2 class="section-title" id="books-heading">Books &amp; eBooks</h2>
 <div class="ebook-card">
-<img class="ebook-cover" src="oracle-dba-cover.jpg" width="1024" height="1536" loading="lazy" alt="S³ Academy Oracle DBA Practice book cover, PDF eBook priced at ₹199">
+<img class="ebook-cover" src="oracle-dba-cover.jpg" width="1024" height="1536" loading="lazy" alt="S³ Academy Oracle DBA Practice book cover, PDF eBook">
 <div class="ebook-copy">
 <h3>Oracle DBA Practice</h3>
 <p><strong>An End-to-End Beginner’s Guide</strong></p>
 <p>Explore practical notes on database installation, startup and shutdown, parameter files, tablespaces, users, backup and recovery, RMAN, Data Pump, ASM, Data Guard and performance tuning.</p>
 <p>Presented by <strong>S³ Academy Training &amp; Research Center</strong> · PDF/eBook</p>
-<p class="ebook-price">₹199 Only</p>
+<p class="ebook-price">₹199 (India) · INR 499 (Outside India)</p>
 <div class="book-view-counter" aria-label="Book section views">
 <img id="book-view-badge" data-counter-src="https://hits.sh/hussaindbaorg260-creator.github.io/shahid-portfolio/books-20261007.svg?label=Book%20Section%20Views&amp;color=00a8a8&amp;labelColor=082544" alt="Book section views counter" height="24" hidden referrerpolicy="no-referrer">
 <span id="book-view-status" role="status">Views counter loads when this book is viewed.</span>
 
 </div>
-<div class="ebook-actions">
-<a class="btn btn-outline" href="Oracle_DBA_Practice_Free_Sample_28_Pages.pdf" target="_blank" rel="noopener">Read Free Sample · 28 Pages</a>
-<a class="btn btn-primary" href="https://wa.me/918282898931?text=Hello%20Shahid%2C%20I%20would%20like%20to%20buy%20Oracle%20DBA%20Practice%3A%20An%20End-to-End%20Guide%20for%20Beginners%20%28PDF/eBook%29%20for%20%E2%82%B9199.%20Please%20share%20the%20payment%20details%20and%20PDF%20delivery%20process." target="_blank" rel="noopener">Buy eBook ₹199 via WhatsApp</a>
+
+<!-- Free Sample Action (Kept Separate from Purchase Buttons) -->
+<div class="ebook-sample-action">
+<a class="btn btn-outline" href="https://drive.google.com/drive/u/1/folders/1zZ6-oCw_xO8Hs7fZZ-jmB9HLjQu2gqTl" target="_blank" rel="noopener">Read Free Sample · 13 Pages</a>
+</div>
+
+<!-- WhatsApp Purchase Buttons Section -->
+<div class="ebook-purchase-section">
+<div class="ebook-purchase-buttons">
+<a class="btn btn-primary" href="https://wa.me/918282898931?text=Hello%20Shahid%2C%20I%20would%20like%20to%20purchase%20the%20PDF%20edition%20of%20Oracle%20DBA%20Practice%3A%20An%20End-to-End%20Beginner%E2%80%99s%20Guide%20at%20the%20India%20price%20of%20INR%20199.%20Kindly%20share%20the%20payment%20details%20and%20expected%20delivery%20timeframe.%20Thank%20you." target="_blank" rel="noopener">Buy in India — ₹199</a>
+<a class="btn btn-primary" href="https://wa.me/918282898931?text=Hello%20Shahid%2C%20I%20am%20based%20outside%20India%20and%20would%20like%20to%20purchase%20the%20PDF%20edition%20of%20Oracle%20DBA%20Practice%3A%20An%20End-to-End%20Beginner%E2%80%99s%20Guide%20at%20the%20international%20price%20of%20INR%20499.%20Kindly%20share%20the%20available%20payment%20options%20and%20expected%20delivery%20timeframe.%20Thank%20you." target="_blank" rel="noopener">Buy Outside India — INR 499</a>
+</div>
+<p class="ebook-purchase-note">Select the option for your location. Payment details and PDF delivery information will be shared via WhatsApp.</p>
+</div>
+
+<!-- Secondary Actions: Share and Review -->
+<div class="ebook-secondary-actions">
 <button class="btn book-share-button" id="share-book-button" type="button" aria-label="Share Oracle DBA Practice book page"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg> Share This Book</button>
 <a class="btn book-review-button" href="https://wa.me/918282898931?text=Hello%20Shahid%2C%20I%20would%20like%20to%20share%20my%20review%20of%20Oracle%20DBA%20Practice.%0A%0AI%20read%3A%20Free%20sample%20%2F%20Full%20book%0ARating%20%281-5%29%3A%0AMy%20feedback%3A%0AName%20%28optional%29%3A%0AMay%20you%20publish%20this%20review%20on%20your%20portfolio%3F%20Yes%20%2F%20No" target="_blank" rel="noopener" aria-label="Write a book review via WhatsApp">☆ Write a Review</a>
 </div>
 <p id="book-share-status" class="ebook-note" role="status" aria-live="polite" hidden></p>
 <p class="ebook-note">Share feedback on the free sample or full book via WhatsApp. Reviews are published only with your permission.</p>
-<p class="ebook-note">Purchase through WhatsApp: request payment details, complete payment, and receive the PDF after payment is confirmed. Delivery is handled manually; this button opens a purchase enquiry.</p>
-<p class="ebook-note">Examples in the notes include Oracle 11g and 12c environments. The 28-page free sample includes the latest cover, introductory pages, full-book contents for reference, Oracle 11g installation, and database startup stages. Examples are for isolated lab practice.</p>
+<p class="ebook-note">Purchase through WhatsApp: request payment details, complete payment, and receive the PDF after payment is confirmed. Delivery is handled manually; these buttons open a purchase enquiry.</p>
+<p class="ebook-note">Examples in the notes include Oracle 11g and 12c environments. The 13-page free sample covers the Oracle Database 11g installation and environment setup lifecycle, commands, procedures, and configuration notes. Examples are for isolated lab practice.</p>
 </div></div></div></section>
 
 <section id="blog" aria-labelledby="blog-heading">
@@ -3108,8 +3133,8 @@ announcementPause.addEventListener('click', () => { const paused = announcementP
   if (!button || !status) return;
   const url = 'https://hussaindbaorg260-creator.github.io/shahid-portfolio/#books';
   const data = {
-    title: 'Oracle DBA Practice: An End-to-End Guide for Beginners',
-    text: 'Explore Oracle DBA Practice by S³ Academy and read the free 15-page sample.',
+    title: 'Oracle DBA Practice: An End-to-End Beginner’s Guide',
+    text: 'Explore Oracle DBA Practice by S³ Academy and read the free 13-page sample.',
     url: url
   };
   function announce(message) { status.hidden = false; status.textContent = message; }
