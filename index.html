@@ -1159,8 +1159,9 @@
   display: block;
   width: 100%;
   height: auto;
-  max-height: 400px;
+  max-height: 480px;
   background: #000;
+  object-fit: contain;
 }
 .promo-media iframe {
   width: 100%;
@@ -1198,6 +1199,25 @@
   background: #fef3c7;
   color: #92400e;
   border: 1px solid #fde68a;
+}
+.promo-badge-expired {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+.promo-card.is-expired {
+  opacity: 0.88;
+}
+.promo-card.is-expired .btn-expired {
+  background: #94a3b8 !important;
+  border-color: #94a3b8 !important;
+  color: #ffffff !important;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.promo-card.is-expired .promo-event-time {
+  background: #f1f5f9;
+  color: #64748b;
 }
 .promo-title {
   font-size: 1.25rem;
@@ -1783,37 +1803,40 @@ section[id]{scroll-margin-top:250px}
     <div class="promotions-grid" id="promotions-grid">
 
       <!-- =====================================================================
-           UNPUBLISHED DRAFT: TechZone Academy Promotion
-           Event: Saturday, 17 October 2026, at 2:00 PM IST
-           Status: Kept as an unpublished draft until user supplies course/event title,
-                   poster or reel, description, advertiser contact details, and registration link.
-           (No placeholder text exposed on the live website per strict instructions)
+           TechZone Academy Promotion Card
+           Media: techzone-free-demo-17-oct-2026-compressed.mp4
+           Event: Saturday, 17 October 2026 · 2:00 PM IST
+           Automatic Expiry: 2026-10-17T14:00:00+05:30
       ====================================================================== -->
-      <!--
       <article class="promo-card" data-expiry="2026-10-17T14:00:00+05:30">
         <div class="promo-media">
-          <img src="" alt="TechZone Academy promotional poster" loading="lazy" />
+          <video controls playsinline preload="metadata" style="max-height:460px;width:100%;aspect-ratio:9/16;background:#000;display:block;margin:0 auto;">
+            <source src="techzone-free-demo-17-oct-2026-compressed.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
         </div>
         <div class="promo-body">
           <div class="promo-meta">
             <span class="promo-business">TechZone Academy</span>
-            <span class="promo-badge promo-badge-sponsored">Sponsored</span>
+            <div class="promo-badges" style="display:inline-flex;gap:6px;align-items:center;">
+              <span class="promo-badge promo-badge-expired" style="display:none;" aria-label="Event Expired">Expired</span>
+              <span class="promo-badge promo-badge-sponsored">Sponsored</span>
+            </div>
           </div>
-          <h3 class="promo-title">Course / Event Title</h3>
-          <p class="promo-desc">Short promotional description of the course or event.</p>
+          <h3 class="promo-title">Free Digital Marketing Demo Class</h3>
+          <p class="promo-desc">Join senior instructor Mr. Shabaz (25+ years experience) for a free live introductory session on Digital Marketing strategies, tools, and career scope.</p>
           <div class="promo-event-time">
             <i class="fa-regular fa-calendar" aria-hidden="true"></i>
-            <span>Saturday, 17 October 2026 · 2:00 PM IST</span>
+            <span class="promo-time-text">Saturday, 17 October 2026 · 2:00 PM IST</span>
           </div>
           <div class="promo-actions">
-            <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Register</a>
+            <a class="btn btn-primary promo-cta" href="https://wa.me/918282898931?text=Hello%20Shahid%2C%20I%20would%20like%20to%20register%20for%20TechZone%20Academy%20free%20Digital%20Marketing%20Demo%20on%20Saturday%2C%2017%20October%202026%20at%202%3A00%20PM%20IST.%20Please%20share%20the%20joining%20details." target="_blank" rel="noopener">Register for Free Demo</a>
           </div>
         </div>
       </article>
-      -->
 
-      <!-- Notice displayed while new promotion details are being finalized -->
-      <div class="promo-empty-state">
+      <!-- Notice displayed if no promotions are currently active -->
+      <div class="promo-empty-state" id="promo-empty-state" style="display: none;">
         <div class="promo-empty-icon"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i></div>
         <h3>Upcoming Featured Promotions</h3>
         <p>Featured courses, workshops, services, and partner business promotions are currently being scheduled. Check back soon or promote your own brand below.</p>
@@ -3404,11 +3427,32 @@ async function shareDigitalDemo(button){
       if (expiryStr) {
         var expiryDate = new Date(expiryStr);
         if (!isNaN(expiryDate.getTime()) && now > expiryDate) {
-          card.setAttribute('hidden', '');
-          card.style.display = 'none';
+          card.classList.add('is-expired');
+          var expiredBadge = card.querySelector('.promo-badge-expired');
+          if (expiredBadge) {
+            expiredBadge.style.display = 'inline-block';
+          }
+          var cta = card.querySelector('.promo-actions .btn');
+          if (cta) {
+            cta.classList.add('btn-expired');
+            cta.setAttribute('aria-disabled', 'true');
+            cta.removeAttribute('href');
+            cta.textContent = 'Event Concluded';
+          }
+          if (card.getAttribute('data-expiry-action') === 'hide') {
+            card.setAttribute('hidden', '');
+            card.style.display = 'none';
+          }
         }
       }
     });
+    var visibleCards = Array.from(cards).filter(function(c) {
+      return c.style.display !== 'none' && !c.hasAttribute('hidden');
+    });
+    var emptyState = document.getElementById('promo-empty-state');
+    if (emptyState) {
+      emptyState.style.display = (visibleCards.length === 0) ? 'block' : 'none';
+    }
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', checkPromotionExpiry);
