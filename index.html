@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- Approved portfolio layout: 8 October 2026, latest revision 4 -->
@@ -2622,48 +2622,719 @@ section[id]{scroll-margin-top:250px}
 <!-- ================================================================
      SECTION 10 — SOCIAL ACTIVITIES
 ================================================================ -->
+<!-- ================================================================
+     BOOK SECTION — Oracle DBA Practice
+     Updated: October 2026
+     Verified contacts: WhatsApp 918282898931 | hussain.dbaorg260@gmail.com
+     Verified sample: Oracle_DBA_Practice_Free_Sample_28_Pages.pdf (in repo)
+     Cover image: oracle-dba-cover.jpg (in repo)
+================================================================ -->
 <section id="books" aria-labelledby="books-heading">
-<div class="container">
-<p class="section-label">Practical Learning Resources</p>
-<h2 class="section-title" id="books-heading">Books &amp; eBooks</h2>
-<div class="ebook-card">
-<img class="ebook-cover" src="oracle-dba-cover.jpg" width="1024" height="1536" loading="lazy" alt="S³ Academy Oracle DBA Practice book cover, PDF eBook">
-<div class="ebook-copy">
-<h3>Oracle DBA Practice</h3>
-<p><strong>An End-to-End Beginner’s Guide</strong></p>
-<p>Explore practical notes on database installation, startup and shutdown, parameter files, tablespaces, users, backup and recovery, RMAN, Data Pump, ASM, Data Guard and performance tuning.</p>
-<p>Presented by <strong>S³ Academy Training &amp; Research Center</strong> · PDF/eBook</p>
-<p class="ebook-price">₹199 (India) · INR 499 (Outside India)</p>
-<div class="book-view-counter" aria-label="Book section views">
-<img id="book-view-badge" data-counter-src="https://hits.sh/hussaindbaorg260-creator.github.io/shahid-portfolio/books-20261007.svg?label=Book%20Section%20Views&amp;color=00a8a8&amp;labelColor=082544" alt="Book section views counter" height="24" hidden referrerpolicy="no-referrer">
-<span id="book-view-status" role="status">Views counter loads when this book is viewed.</span>
+<style>
+/* ── Book Section Styles ─────────────────────────────────── */
+#books {
+  background: linear-gradient(160deg, #0a1628 0%, #0f1f3d 55%, #0d1b35 100%);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+#books::before {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(201,168,76,.07) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 40% at 10% 80%, rgba(30,184,184,.06) 0%, transparent 60%);
+}
 
-</div>
+/* Section header */
+#books .bk-section-label {
+  display: inline-block;
+  font-size: .75rem; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--gold, #C9A84C);
+  margin-bottom: 10px;
+}
+#books .bk-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  color: #fff; line-height: 1.3; margin: 0 0 8px;
+}
+#books .bk-section-sub {
+  font-size: .95rem; color: rgba(255,255,255,.55);
+  margin: 0 0 48px;
+}
 
-<!-- Free Sample Action (Kept Separate from Purchase Buttons) -->
-<div class="ebook-sample-action">
-<a class="btn btn-outline" href="https://drive.google.com/file/d/1zCzdNiObp3zM8kWuByvlzUHXXZX1ZQ9W/view?usp=drive_link" target="_blank" rel="noopener">Read Free Sample · 13 Pages</a>
-</div>
+/* Delivery banner */
+.bk-delivery-banner {
+  background: rgba(30,184,184,.12);
+  border: 1px solid rgba(30,184,184,.3);
+  border-left: 4px solid var(--teal, #1EB8B8);
+  border-radius: 10px;
+  padding: 14px 20px;
+  margin-bottom: 36px;
+  display: flex; align-items: flex-start; gap: 12px;
+  color: rgba(255,255,255,.85); font-size: .88rem; line-height: 1.6;
+}
+.bk-delivery-banner svg { flex-shrink: 0; margin-top: 2px; color: var(--teal, #1EB8B8); }
 
-<!-- WhatsApp Purchase Buttons Section -->
-<div class="ebook-purchase-section">
-<div class="ebook-purchase-buttons">
-<a class="btn btn-primary" href="https://wa.me/918282898931?text=Hello%20Shahid%2C%20I%20would%20like%20to%20purchase%20the%20PDF%20edition%20of%20Oracle%20DBA%20Practice%3A%20An%20End-to-End%20Beginner%E2%80%99s%20Guide%20at%20the%20India%20price%20of%20INR%20199.%20Kindly%20share%20the%20payment%20details%20and%20expected%20delivery%20timeframe.%20Thank%20you." target="_blank" rel="noopener">Buy in India — ₹199</a>
-<a class="btn btn-primary" href="https://wa.me/918282898931?text=Hello%20Shahid%2C%20I%20am%20based%20outside%20India%20and%20would%20like%20to%20purchase%20the%20PDF%20edition%20of%20Oracle%20DBA%20Practice%3A%20An%20End-to-End%20Beginner%E2%80%99s%20Guide%20at%20the%20international%20price%20of%20INR%20499.%20Kindly%20share%20the%20available%20payment%20options%20and%20expected%20delivery%20timeframe.%20Thank%20you." target="_blank" rel="noopener">Buy Outside India — INR 499</a>
-</div>
-<p class="ebook-purchase-note">Select the option for your location. Payment details and PDF delivery information will be shared via WhatsApp.</p>
-</div>
+/* Main showcase grid */
+.bk-showcase {
+  display: grid;
+  grid-template-columns: minmax(200px, 300px) 1fr;
+  gap: 48px;
+  align-items: start;
+}
 
-<!-- Secondary Actions: Share and Review -->
-<div class="ebook-secondary-actions">
-<button class="btn book-share-button" id="share-book-button" type="button" aria-label="Share Oracle DBA Practice book page"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg> Share This Book</button>
-<a class="btn book-review-button" href="https://wa.me/918282898931?text=Hello%20Shahid%2C%20I%20would%20like%20to%20share%20my%20review%20of%20Oracle%20DBA%20Practice.%0A%0AI%20read%3A%20Free%20sample%20%2F%20Full%20book%0ARating%20%281-5%29%3A%0AMy%20feedback%3A%0AName%20%28optional%29%3A%0AMay%20you%20publish%20this%20review%20on%20your%20portfolio%3F%20Yes%20%2F%20No" target="_blank" rel="noopener" aria-label="Write a book review via WhatsApp">☆ Write a Review</a>
-</div>
-<p id="book-share-status" class="ebook-note" role="status" aria-live="polite" hidden></p>
-<p class="ebook-note">Share feedback on the free sample or full book via WhatsApp. Reviews are published only with your permission.</p>
-<p class="ebook-note">Purchase through WhatsApp: request payment details, complete payment, and receive the PDF after payment is confirmed. Delivery is handled manually; these buttons open a purchase enquiry.</p>
-<p class="ebook-note">Examples in the notes include Oracle 11g and 12c environments. The 13-page free sample covers the Oracle Database 11g installation and environment setup lifecycle, commands, procedures, and configuration notes. Examples are for isolated lab practice.</p>
-</div></div></div></section>
+/* Book cover */
+.bk-cover-col { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.bk-cover-wrap {
+  position: relative; width: 100%;
+}
+.bk-cover-img {
+  display: block; width: 100%; height: auto;
+  border-radius: 12px;
+  box-shadow:
+    0 4px 8px rgba(0,0,0,.3),
+    0 16px 40px rgba(0,0,0,.5),
+    4px 4px 0 rgba(201,168,76,.15),
+    8px 8px 0 rgba(201,168,76,.07);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.bk-cover-img:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow:
+    0 8px 16px rgba(0,0,0,.35),
+    0 24px 56px rgba(0,0,0,.55),
+    4px 4px 0 rgba(201,168,76,.2);
+}
+.bk-cover-badge {
+  background: linear-gradient(135deg, rgba(201,168,76,.25), rgba(201,168,76,.08));
+  border: 1px solid rgba(201,168,76,.45);
+  color: var(--gold, #C9A84C);
+  border-radius: 8px; padding: 10px 16px;
+  font-size: .8rem; font-weight: 600; text-align: center; width: 100%;
+  line-height: 1.5;
+}
+.bk-cover-badge strong { display: block; font-size: 1.05rem; }
+
+/* View counter */
+.bk-view-counter {
+  display: flex; align-items: center; gap: 8px;
+  font-size: .78rem; color: rgba(255,255,255,.45);
+  width: 100%; justify-content: center;
+}
+.bk-view-counter img { height: 20px; }
+
+/* Right column */
+.bk-info-col {}
+
+/* Title block */
+.bk-title-block { margin-bottom: 24px; }
+.bk-presenter {
+  font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--gold, #C9A84C); font-weight: 700; margin-bottom: 8px;
+}
+.bk-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: #fff; line-height: 1.25; margin: 0 0 6px;
+}
+.bk-subtitle {
+  font-size: .95rem; color: rgba(255,255,255,.65);
+  font-style: italic; margin: 0 0 10px; line-height: 1.5;
+}
+.bk-key-topic {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(201,168,76,.12); border: 1px solid rgba(201,168,76,.3);
+  color: var(--gold, #C9A84C); border-radius: 6px; padding: 5px 12px;
+  font-size: .82rem; font-weight: 600; margin-bottom: 6px;
+}
+.bk-tagline {
+  font-size: .82rem; color: rgba(255,255,255,.4);
+  font-style: italic; margin: 0;
+}
+
+/* Description */
+.bk-description {
+  color: rgba(255,255,255,.72); font-size: .92rem; line-height: 1.8;
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+/* What's Included */
+.bk-included { margin-bottom: 28px; }
+.bk-included-title {
+  font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
+  color: rgba(255,255,255,.45); font-weight: 700; margin-bottom: 14px;
+}
+.bk-included-list {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+  list-style: none; padding: 0; margin: 0;
+}
+.bk-included-list li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: .88rem; color: rgba(255,255,255,.8); line-height: 1.5;
+}
+.bk-check {
+  width: 20px; height: 20px; min-width: 20px;
+  background: rgba(30,184,184,.15); border: 1px solid rgba(30,184,184,.4);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  margin-top: 1px;
+}
+.bk-check svg { color: var(--teal, #1EB8B8); }
+
+/* Pricing */
+.bk-pricing { margin-bottom: 28px; }
+.bk-pricing-title {
+  font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
+  color: rgba(255,255,255,.45); font-weight: 700; margin-bottom: 14px;
+}
+.bk-price-cards {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  margin-bottom: 12px;
+}
+.bk-price-card {
+  border-radius: 12px; padding: 20px 18px; text-align: center;
+  border: 1px solid;
+}
+.bk-price-card-india {
+  background: linear-gradient(135deg, rgba(201,168,76,.18), rgba(201,168,76,.06));
+  border-color: rgba(201,168,76,.4);
+}
+.bk-price-card-intl {
+  background: rgba(255,255,255,.04);
+  border-color: rgba(255,255,255,.12);
+}
+.bk-price-region {
+  font-size: .75rem; letter-spacing: .1em; text-transform: uppercase;
+  font-weight: 700; margin-bottom: 6px;
+}
+.bk-price-card-india  .bk-price-region { color: var(--gold, #C9A84C); }
+.bk-price-card-intl   .bk-price-region { color: rgba(255,255,255,.55); }
+.bk-price-amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem; font-weight: 700; line-height: 1; margin-bottom: 4px;
+}
+.bk-price-card-india  .bk-price-amount { color: #fff; }
+.bk-price-card-intl   .bk-price-amount { color: rgba(255,255,255,.85); }
+.bk-price-format {
+  font-size: .75rem; color: rgba(255,255,255,.45);
+}
+.bk-price-note {
+  font-size: .78rem; color: rgba(255,255,255,.45); line-height: 1.6;
+  font-style: italic;
+}
+
+/* CTA */
+.bk-cta { margin-bottom: 28px; }
+.bk-cta-title {
+  font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
+  color: rgba(255,255,255,.45); font-weight: 700; margin-bottom: 14px;
+}
+.bk-cta-buttons {
+  display: flex; flex-direction: column; gap: 10px;
+}
+.bk-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 10px; padding: 13px 22px;
+  border-radius: 10px; font-size: .92rem; font-weight: 700;
+  text-decoration: none; border: 2px solid transparent;
+  cursor: pointer; transition: all .22s ease;
+  white-space: normal; text-align: center; line-height: 1.4;
+  min-height: 48px;
+}
+.bk-btn:focus-visible { outline: 3px solid var(--gold, #C9A84C); outline-offset: 3px; }
+
+.bk-btn-sample {
+  background: transparent;
+  border-color: rgba(201,168,76,.6);
+  color: var(--gold, #C9A84C);
+}
+.bk-btn-sample:hover {
+  background: rgba(201,168,76,.12);
+  border-color: var(--gold, #C9A84C);
+  color: #fff;
+}
+
+.bk-btn-whatsapp {
+  background: #1FAD5A;
+  border-color: #1FAD5A;
+  color: #fff;
+}
+.bk-btn-whatsapp:hover { background: #179649; border-color: #179649; }
+
+.bk-btn-email {
+  background: rgba(255,255,255,.07);
+  border-color: rgba(255,255,255,.2);
+  color: rgba(255,255,255,.88);
+}
+.bk-btn-email:hover {
+  background: rgba(255,255,255,.12);
+  border-color: rgba(255,255,255,.35);
+  color: #fff;
+}
+
+.bk-btn-icon {
+  width: 22px; height: 22px; flex-shrink: 0;
+}
+.bk-cta-note {
+  font-size: .78rem; color: rgba(255,255,255,.4); line-height: 1.6;
+  margin-top: 10px; font-style: italic;
+}
+
+/* Secondary actions (share + review) */
+.bk-secondary-actions {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  margin-bottom: 28px;
+}
+.bk-btn-share {
+  background: transparent; border-color: rgba(255,255,255,.2);
+  color: rgba(255,255,255,.65);
+}
+.bk-btn-share:hover { background: rgba(255,255,255,.07); color: #fff; border-color: rgba(255,255,255,.35); }
+.bk-btn-review {
+  background: rgba(244,197,83,.12); border-color: rgba(244,197,83,.5);
+  color: #f4c553;
+}
+.bk-btn-review:hover { background: rgba(244,197,83,.2); color: #fff; }
+
+/* Policy links */
+.bk-policy { margin-bottom: 0; }
+.bk-policy-title {
+  font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
+  color: rgba(255,255,255,.45); font-weight: 700; margin-bottom: 12px;
+}
+.bk-policy-links {
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.bk-policy-link {
+  font-size: .8rem; color: rgba(30,184,184,.85);
+  padding: 5px 12px;
+  border: 1px solid rgba(30,184,184,.25);
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all .2s;
+}
+.bk-policy-link:hover {
+  color: #fff; background: rgba(30,184,184,.15);
+  border-color: rgba(30,184,184,.5);
+}
+
+/* share status */
+#bk-share-status { font-size: .82rem; color: var(--teal, #1EB8B8); margin-top: 6px; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 800px) {
+  .bk-showcase { grid-template-columns: 1fr; gap: 32px; }
+  .bk-cover-col { max-width: 260px; margin: 0 auto; }
+  .bk-included-list { grid-template-columns: 1fr; }
+  .bk-price-cards { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  #books { padding: 60px 0; }
+  .bk-price-cards { grid-template-columns: 1fr; }
+  .bk-btn { font-size: .88rem; padding: 12px 16px; }
+  .bk-policy-links { flex-direction: column; }
+}
+</style>
+
+<div class="container" style="position:relative; z-index:1;">
+
+  <!-- Section Header -->
+  <p class="bk-section-label">Practical Learning Resources</p>
+  <h2 class="bk-section-title" id="books-heading">Books &amp; eBooks</h2>
+  <p class="bk-section-sub">Oracle DBA training material from S³ Academy Training &amp; Research Center</p>
+
+  <!-- Delivery Information Banner -->
+  <div class="bk-delivery-banner" role="note" aria-label="Digital delivery information">
+    <svg class="bk-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+    </svg>
+    <span>
+      <strong>Digital eBook Delivery Notice:</strong> This is a digital PDF eBook, not a physical book.
+      Delivery is handled <strong>manually via email or WhatsApp</strong> after payment verification.
+      No automatic payment or instant download system is used.
+    </span>
+  </div>
+
+  <!-- Main Showcase -->
+  <div class="bk-showcase">
+
+    <!-- Left: Cover Column -->
+    <div class="bk-cover-col">
+      <div class="bk-cover-wrap">
+        <img
+          class="bk-cover-img"
+          src="oracle-dba-cover.jpg"
+          width="1024" height="1536"
+          loading="lazy"
+          alt="Oracle DBA Practice: An End-to-End Beginner's Guide — book cover, PDF eBook by S³ Academy Training & Research Center"
+        >
+      </div>
+
+      <div class="bk-cover-badge">
+        <strong>490+ Pages</strong>
+        Digital PDF / eBook &nbsp;·&nbsp; Oracle 11g · 12c · 19c · 26ai
+      </div>
+
+      <!-- View counter (preserved from original) -->
+      <div class="bk-view-counter" aria-label="Book section views">
+        <img id="book-view-badge"
+             data-counter-src="https://hits.sh/hussaindbaorg260-creator.github.io/shahid-portfolio/books-20261007.svg?label=Book%20Section%20Views&color=00a8a8&labelColor=082544"
+             alt="Book section views counter"
+             height="20" hidden referrerpolicy="no-referrer">
+        <span id="book-view-status" role="status" style="font-size:.75rem; color:rgba(255,255,255,.35);">Views counter loads when viewed.</span>
+      </div>
+    </div>
+
+    <!-- Right: Info Column -->
+    <div class="bk-info-col">
+
+      <!-- Title Block -->
+      <div class="bk-title-block">
+        <p class="bk-presenter">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-2px; margin-right:4px;" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          S³ Academy Training &amp; Research Center &nbsp;·&nbsp; Empowering Minds. Shaping Futures.
+        </p>
+        <h3 class="bk-title">Oracle DBA Practice:<br>An End-to-End Beginner's Guide</h3>
+        <p class="bk-subtitle">Includes Oracle Database 11g, 12c, 19c &amp; Oracle AI Database 26ai</p>
+        <span class="bk-key-topic">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v4c0 1.7 4 3 9 3s9-1.3 9-3V5"/><path d="M3 9v4c0 1.7 4 3 9 3s9-1.3 9-3V9"/><path d="M3 13v4c0 1.7 4 3 9 3s9-1.3 9-3v-4"/></svg>
+          Key Topic: Multitenant Architecture — CDB &amp; PDB Concepts with Practical Examples
+        </span>
+        <p class="bk-tagline">Format: Digital PDF / eBook</p>
+      </div>
+
+      <!-- Description -->
+      <div class="bk-description">
+        <p>
+          A comprehensive, practical guide to Oracle Database Administration covering fundamental to intermediate
+          concepts with real-world command examples. This book walks you through the complete Oracle DBA lifecycle —
+          from installation and configuration to day-to-day administration tasks.
+        </p>
+        <p style="margin-top:10px;">
+          Topics include Oracle Database installation and environment setup, database startup and shutdown procedures,
+          parameter files (PFILE and SPFILE), tablespace management, user and privilege administration, backup and
+          recovery strategies, RMAN configuration and usage, Oracle Data Pump (export and import), Automatic Storage
+          Management (ASM), Oracle Data Guard for high availability, performance tuning fundamentals, and Oracle
+          Multitenant architecture with Pluggable Database (PDB) and Container Database (CDB) concepts with
+          step-by-step practical examples.
+        </p>
+        <p style="margin-top:10px; font-size:.85rem; color:rgba(255,255,255,.5);">
+          Examples cover Oracle 11g and 12c environments. Practice in an isolated lab environment.
+        </p>
+      </div>
+
+      <!-- What's Included -->
+      <div class="bk-included">
+        <p class="bk-included-title">What's Included</p>
+        <ul class="bk-included-list" role="list">
+          <li>
+            <span class="bk-check" aria-hidden="true">
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="2,6 5,9 10,3"/></svg>
+            </span>
+            Oracle DBA fundamentals and practical administration
+          </li>
+          <li>
+            <span class="bk-check" aria-hidden="true">
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="2,6 5,9 10,3"/></svg>
+            </span>
+            Database startup, shutdown, parameter files &amp; tablespaces
+          </li>
+          <li>
+            <span class="bk-check" aria-hidden="true">
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="2,6 5,9 10,3"/></svg>
+            </span>
+            RMAN, Data Pump, backup &amp; recovery concepts
+          </li>
+          <li>
+            <span class="bk-check" aria-hidden="true">
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="2,6 5,9 10,3"/></svg>
+            </span>
+            ASM, Data Guard &amp; performance tuning
+          </li>
+          <li>
+            <span class="bk-check" aria-hidden="true">
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="2,6 5,9 10,3"/></svg>
+            </span>
+            Oracle Multitenant architecture: CDB &amp; PDB with examples
+          </li>
+          <li>
+            <span class="bk-check" aria-hidden="true">
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="2,6 5,9 10,3"/></svg>
+            </span>
+            Oracle AI Database 26ai overview concepts
+          </li>
+        </ul>
+      </div>
+
+      <!-- Pricing -->
+      <div class="bk-pricing">
+        <p class="bk-pricing-title">Pricing</p>
+        <div class="bk-price-cards">
+          <div class="bk-price-card bk-price-card-india" role="region" aria-label="India pricing">
+            <p class="bk-price-region">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              &nbsp;India
+            </p>
+            <p class="bk-price-amount">₹199</p>
+            <p class="bk-price-format">Indian Rupees</p>
+          </div>
+          <div class="bk-price-card bk-price-card-intl" role="region" aria-label="International pricing">
+            <p class="bk-price-region">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              &nbsp;Outside India
+            </p>
+            <p class="bk-price-amount">₹499</p>
+            <p class="bk-price-format">Indian Rupees</p>
+          </div>
+        </div>
+        <p class="bk-price-note">
+          International customers should confirm the payment currency and any applicable conversion charges before making payment.
+          Payment details are shared manually via WhatsApp or email after you place your order.
+        </p>
+      </div>
+
+      <!-- Get Your Copy: CTA Buttons -->
+      <div class="bk-cta">
+        <p class="bk-cta-title">Get Your Copy</p>
+        <div class="bk-cta-buttons">
+
+          <!-- Free Sample -->
+          <a class="bk-btn bk-btn-sample"
+             href="Oracle_DBA_Practice_Free_Sample_28_Pages.pdf"
+             target="_blank" rel="noopener"
+             aria-label="Read free 28-page sample of Oracle DBA Practice (PDF opens in new tab)">
+            <svg class="bk-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+            </svg>
+            Read Free Sample — 28 Pages
+          </a>
+
+          <!-- Buy via WhatsApp -->
+          <a class="bk-btn bk-btn-whatsapp"
+             href="https://wa.me/918282898931?text=Hello%2C%20I%20would%20like%20to%20purchase%20Oracle%20DBA%20Practice%3A%20An%20End-to-End%20Beginner%27s%20Guide.%0AMy%20country%20is%3A%20%5BCountry%5D%0APlease%20confirm%20the%20applicable%20price%2C%20payment%20instructions%2C%20and%20delivery%20process.%0APreferred%20delivery%20method%3A%20Email%20%2F%20WhatsApp."
+             target="_blank" rel="noopener"
+             aria-label="Order Oracle DBA Practice book via WhatsApp">
+            <svg class="bk-btn-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Buy via WhatsApp
+          </a>
+
+          <!-- Order via Email -->
+          <a class="bk-btn bk-btn-email"
+             href="mailto:hussain.dbaorg260@gmail.com?subject=Book%20Order%20%E2%80%93%20Oracle%20DBA%20Practice&body=Hello%2C%0A%0AI%20would%20like%20to%20order%20Oracle%20DBA%20Practice%3A%20An%20End-to-End%20Beginner%27s%20Guide.%0A%0APlease%20find%20my%20details%20below%3A%0A%0AName%3A%0ACountry%3A%0AContact%20Email%3A%0APreferred%20Delivery%20Method%20(Email%20%2F%20WhatsApp)%3A%0APayment%20Reference%20(if%20applicable)%3A%0A%0AKindly%20confirm%20the%20applicable%20price%2C%20payment%20instructions%2C%20and%20expected%20delivery%20timeline.%0A%0AThank%20you."
+             aria-label="Order Oracle DBA Practice book via email">
+            <svg class="bk-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            Order via Email
+          </a>
+        </div>
+        <p class="bk-cta-note">
+          Orders are placed through WhatsApp or email. Payment instructions and verification are handled manually.
+          The PDF is delivered manually after payment is confirmed. Delivery is not instant or automated.
+        </p>
+      </div>
+
+      <!-- Secondary actions: Share & Review (preserved from original) -->
+      <div class="bk-secondary-actions">
+        <button class="bk-btn bk-btn-share" id="share-book-button" type="button" aria-label="Share Oracle DBA Practice book page">
+          <svg class="bk-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+            <path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/>
+          </svg>
+          Share This Book
+        </button>
+        <a class="bk-btn bk-btn-review"
+           href="https://wa.me/918282898931?text=Hello%20Shahid%2C%20I%20would%20like%20to%20share%20my%20review%20of%20Oracle%20DBA%20Practice.%0A%0AI%20read%3A%20Free%20sample%20%2F%20Full%20book%0ARating%20%281-5%29%3A%0AMy%20feedback%3A%0AName%20%28optional%29%3A%0AMay%20you%20publish%20this%20review%20on%20your%20portfolio%3F%20Yes%20%2F%20No"
+           target="_blank" rel="noopener"
+           aria-label="Write a book review via WhatsApp">
+          <svg class="bk-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+          </svg>
+          Write a Review
+        </a>
+        <p id="bk-share-status" role="status" aria-live="polite" style="display:none; width:100%;"></p>
+        <p style="width:100%; font-size:.78rem; color:rgba(255,255,255,.4); font-style:italic; margin:0;">
+          Share feedback on the free sample or full book via WhatsApp. Reviews are published only with your permission.
+        </p>
+      </div>
+
+      <!-- Policy Links -->
+      <div class="bk-policy">
+        <p class="bk-policy-title">Important Links</p>
+        <nav class="bk-policy-links" aria-label="Book policies and legal information">
+          <a class="bk-policy-link" href="#book-terms-conditions">Terms &amp; Conditions</a>
+          <a class="bk-policy-link" href="#book-refund-policy">Refund Policy</a>
+          <a class="bk-policy-link" href="#book-delivery-policy">Digital Delivery Policy</a>
+          <a class="bk-policy-link" href="#book-copyright">Copyright Notice</a>
+        </nav>
+      </div>
+
+    </div><!-- /bk-info-col -->
+  </div><!-- /bk-showcase -->
+
+  <!-- ── Policy Sections ───────────────────────────────────── -->
+  <div style="margin-top: 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;" class="bk-policies-grid">
+
+    <style>
+    .bk-policy-card {
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 12px; padding: 28px;
+    }
+    .bk-policy-card h4 {
+      font-size: .9rem; font-weight: 700; color: var(--teal, #1EB8B8);
+      margin: 0 0 12px; display: flex; align-items: center; gap: 8px;
+      letter-spacing: .04em; text-transform: uppercase; font-size: .78rem;
+    }
+    .bk-policy-card p, .bk-policy-card li {
+      font-size: .84rem; color: rgba(255,255,255,.58); line-height: 1.75;
+    }
+    .bk-policy-card ul { padding-left: 0; list-style: none; margin: 0; }
+    .bk-policy-card li { padding: 4px 0 4px 16px; position: relative; }
+    .bk-policy-card li::before { content: '·'; position: absolute; left: 4px; color: var(--teal,#1EB8B8); }
+    @media (max-width: 680px) {
+      .bk-policies-grid { grid-template-columns: 1fr !important; }
+    }
+    </style>
+
+    <!-- Terms & Conditions -->
+    <div class="bk-policy-card" id="book-terms-conditions">
+      <h4>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Terms &amp; Conditions
+      </h4>
+      <ul>
+        <li>This product is a digital PDF eBook — not a physical book.</li>
+        <li>Orders are placed through WhatsApp or email only.</li>
+        <li>Payment instructions are shared manually after your order enquiry.</li>
+        <li>Payment must be verified before the PDF is delivered.</li>
+        <li>The PDF is delivered manually via email or WhatsApp. Delivery is not automated or instant.</li>
+        <li>By purchasing, you agree that the PDF is for personal, non-commercial use only.</li>
+        <li>Redistribution, resale, or sharing of the PDF is prohibited except as permitted by applicable law.</li>
+      </ul>
+    </div>
+
+    <!-- Refund Policy -->
+    <div class="bk-policy-card" id="book-refund-policy">
+      <h4>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.95"/></svg>
+        Refund Policy
+      </h4>
+      <ul>
+        <li>Refunds are handled subject to applicable consumer protection law and your rights thereunder.</li>
+        <li>A refund may be considered in the case of a verified duplicate payment.</li>
+        <li>A refund may be considered where delivery was technically verified as failed and the PDF was not received.</li>
+        <li>Because this is a digital product, refunds are not generally available once the PDF has been delivered.</li>
+        <li>To raise a refund query, contact us via WhatsApp or email with your payment reference.</li>
+      </ul>
+    </div>
+
+    <!-- Digital Delivery Policy -->
+    <div class="bk-policy-card" id="book-delivery-policy">
+      <h4>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Digital Delivery Policy
+      </h4>
+      <ul>
+        <li>After payment is confirmed, the PDF eBook will be delivered manually via email or WhatsApp.</li>
+        <li>There is no automatic download link or payment gateway.</li>
+        <li>Delivery timelines depend on manual processing; please allow reasonable time after payment confirmation.</li>
+        <li>Ensure your contact email or WhatsApp is active and able to receive files.</li>
+        <li>If you do not receive the PDF within a reasonable time after payment, contact us with your payment reference.</li>
+      </ul>
+    </div>
+
+    <!-- Copyright Notice -->
+    <div class="bk-policy-card" id="book-copyright">
+      <h4>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M14.83 14.83a4 4 0 1 1 0-5.66"/></svg>
+        Copyright Notice
+      </h4>
+      <ul>
+        <li>This eBook is protected by applicable copyright law.</li>
+        <li>The content, structure, and examples are the intellectual property of the authors and S³ Academy Training &amp; Research Center.</li>
+        <li>You may not reproduce, redistribute, resell, or share the PDF without prior written permission, except as expressly permitted by applicable law (including fair use and personal backup rights).</li>
+        <li>Unauthorised distribution may constitute a violation of copyright law.</li>
+      </ul>
+    </div>
+
+  </div><!-- /bk-policies-grid -->
+
+</div><!-- /container -->
+
+<!-- Preserved book-view-counter script logic -->
+<script id="book-view-counter-script">
+(function () {
+  var badge  = document.getElementById('book-view-badge');
+  var status = document.getElementById('book-view-status');
+  var target = document.querySelector('#books .bk-title');
+  if (!badge || !target) return;
+  var requested = false;
+  function recordView() {
+    if (requested) return;
+    requested = true;
+    var src = badge.getAttribute('data-counter-src');
+    if (!src) return;
+    badge.src = src;
+    badge.hidden = false;
+    if (status) status.textContent = '';
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) { recordView(); io.disconnect(); }
+    }, { threshold: 0.1 });
+    io.observe(target);
+  } else {
+    recordView();
+  }
+})();
+</script>
+
+<!-- Book share button script -->
+<script id="book-share-script-v2">
+(function () {
+  var button = document.getElementById('share-book-button');
+  var status = document.getElementById('bk-share-status');
+  if (!button) return;
+  var url  = 'https://hussaindbaorg260-creator.github.io/shahid-portfolio/#books';
+  var data = {
+    title: 'Oracle DBA Practice: An End-to-End Beginner\'s Guide',
+    text:  'Explore Oracle DBA Practice by S³ Academy — includes a free 28-page sample. Oracle 11g, 12c, 19c & 26ai.',
+    url:   url
+  };
+  function announce(msg) {
+    if (!status) return;
+    status.textContent = msg;
+    status.style.display = 'block';
+    setTimeout(function () { status.style.display = 'none'; }, 4000);
+  }
+  button.addEventListener('click', async function () {
+    if (navigator.share) {
+      try { await navigator.share(data); announce('Book page shared.'); return; }
+      catch (e) { if (e && e.name === 'AbortError') return; }
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      announce('Book link copied — paste it into WhatsApp, LinkedIn, or any message.');
+    } catch (e) {
+      window.prompt('Copy this book link to share:', url);
+      announce('Select and copy the book link from the dialog.');
+    }
+  });
+})();
+</script>
+
+</section>
+
 
 <section id="blog" aria-labelledby="blog-heading">
   <div class="container">
