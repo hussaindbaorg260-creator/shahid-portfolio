@@ -2922,6 +2922,35 @@ section[id]{scroll-margin-top:250px}
   border-color: rgba(30,184,184,.5);
 }
 
+
+/* YouTube book sample reel */
+.bk-reel-wrap {
+  width: 100%;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+.bk-reel-label {
+  font-size: .72rem; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--gold, #C9A84C);
+  display: flex; align-items: center; gap: 6px;
+  margin: 0;
+}
+.bk-reel-player {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(201,168,76,.3);
+  box-shadow: 0 8px 24px rgba(0,0,0,.45);
+  background: #000;
+}
+.bk-reel-player iframe {
+  width: 100%; height: 100%;
+  display: block; border: none;
+}
+.bk-reel-note {
+  font-size: .72rem; color: rgba(255,255,255,.3);
+  margin: 0; text-align: center;
+}
 /* share status */
 #bk-share-status { font-size: .82rem; color: var(--teal, #1EB8B8); margin-top: 6px; }
 
@@ -2986,6 +3015,29 @@ section[id]{scroll-margin-top:250px}
              alt="Book section views counter"
              height="20" hidden referrerpolicy="no-referrer">
         <span id="book-view-status" role="status" style="font-size:.75rem; color:rgba(255,255,255,.35);">Views counter loads when viewed.</span>
+      </div>
+      <!-- YouTube Book Sample Reel -->
+      <div class="bk-reel-wrap">
+        <p class="bk-reel-label">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <polygon points="5,3 19,12 5,21"/>
+          </svg>
+          Book Sample Reel
+        </p>
+        <div class="bk-reel-player">
+          <iframe
+            src="https://www.youtube.com/embed/mD5SPVwkc8w?rel=0&modestbranding=1"
+            title="Oracle DBA Practice — Book Sample Reel by S³ Academy Training &amp; Research Center"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+        <p class="bk-reel-note">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-1px;" aria-hidden="true"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          YouTube · youtu.be/mD5SPVwkc8w
+        </p>
       </div>
     </div>
 
