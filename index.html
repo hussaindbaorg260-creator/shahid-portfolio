@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MD Shahid Hussain | AI Product Manager &amp; Training Enablement</title>
+  <title>MD Shahid Hussain | AI Product Manager | Product Strategy, Design &amp; Innovation | Enterprise Technology</title>
 
   <!-- SEO and Social Metadata -->
-  <meta name="description" content="Portfolio of MD Shahid Hussain: AI Product Manager, Enterprise Oracle Apps DBA, and Corporate Training Head with 15+ years of IT leadership experience." />
+  <meta name="description" content="Portfolio of MD Shahid Hussain: AI Product Manager specializing in Product Strategy, Design &amp; Innovation, Enterprise Technology, and author of Oracle DBA Practice." />
   <meta name="author" content="MD Shahid Hussain" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://hussaindbaorg260-creator.github.io/shahid-portfolio/" />
   <meta property="og:type" content="profile" />
-  <meta property="og:title" content="MD Shahid Hussain | AI Product Manager &amp; Training Enablement" />
-  <meta property="og:description" content="15+ years of IT leadership, AI Product Management, enterprise Oracle systems, corporate training enablement, and author of Oracle DBA Practice." />
+  <meta property="og:title" content="MD Shahid Hussain | AI Product Manager | Product Strategy, Design &amp; Innovation | Enterprise Technology" />
+  <meta property="og:description" content="AI Product Manager specializing in Product Strategy, Design &amp; Innovation, Enterprise Technology, Generative AI, RAG, and Oracle enterprise systems with 10+ years of IT leadership." />
   <meta property="og:url" content="https://hussaindbaorg260-creator.github.io/shahid-portfolio/" />
   <meta property="og:image" content="https://hussaindbaorg260-creator.github.io/shahid-portfolio/edoxi-hero-portrait.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="MD Shahid Hussain | AI Product Manager &amp; Training Enablement" />
-  <meta name="twitter:description" content="15+ years of IT leadership, AI Product Management, enterprise Oracle systems, corporate training enablement." />
+  <meta name="twitter:title" content="MD Shahid Hussain | AI Product Manager | Product Strategy, Design &amp; Innovation | Enterprise Technology" />
+  <meta name="twitter:description" content="AI Product Manager specializing in Product Strategy, Design &amp; Innovation, Enterprise Technology with 10+ years of IT excellence." />
   <meta name="twitter:image" content="https://hussaindbaorg260-creator.github.io/shahid-portfolio/edoxi-hero-portrait.png" />
 
   <!-- Google Fonts: Inter & Plus Jakarta Sans -->
@@ -34,7 +34,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "MD Shahid Hussain",
-    "jobTitle": "AI Product Manager & Training Head",
+    "jobTitle": "AI Product Manager | Product Strategy, Design & Innovation | Enterprise Technology",
     "worksFor": {
       "@type": "Organization",
       "name": "Yuva Intelli AI Solutions Pvt Ltd"
@@ -138,7 +138,7 @@
     }
 
     section[id], footer[id] {
-      scroll-margin-top: 124px;
+      scroll-margin-top: 115px;
     }
 
     /* Section Styling */
@@ -290,8 +290,8 @@
     .top-announcement-bar {
       background: var(--bright-yellow);
       color: #0F172A;
-      padding: 7px 16px;
-      font-size: 0.84rem;
+      padding: 6px 16px;
+      font-size: 0.82rem;
       font-weight: 700;
       position: relative;
       border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -303,15 +303,20 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 12px;
     }
 
     .top-announcement-content {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       line-height: 1.3;
       letter-spacing: 0.01em;
+      min-width: 0;
+    }
+
+    .ticker-headline {
+      white-space: nowrap;
     }
 
     .top-announcement-content i {
@@ -484,7 +489,7 @@
        ============================================================ */
     .hero-section {
       background: linear-gradient(180deg, #FFFFFF 0%, #F5F9FF 100%);
-      padding: 150px 0 70px; /* Offset for fixed header */
+      padding: 130px 0 70px; /* Offset for fixed header */
       position: relative;
       overflow: hidden;
     }
@@ -545,10 +550,18 @@
     }
 
     .hero-bio {
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       color: var(--text-muted);
-      line-height: 1.7;
-      margin-bottom: 30px;
+      line-height: 1.68;
+      margin-bottom: 28px;
+    }
+
+    .hero-bio p {
+      margin-bottom: 14px;
+    }
+
+    .hero-bio p:last-child {
+      margin-bottom: 0;
     }
 
     .hero-actions {
@@ -559,11 +572,11 @@
     }
 
     .hero-trust-points {
-      margin-top: 36px;
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      padding-top: 24px;
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      padding-top: 20px;
       border-top: 1px solid var(--border-light);
     }
 
@@ -583,13 +596,20 @@
       align-items: center;
       justify-content: center;
       font-size: 0.95rem;
+      flex-shrink: 0;
     }
 
     .hero-trust-text {
-      font-size: 0.82rem;
-      line-height: 1.3;
+      font-size: 0.8rem;
+      line-height: 1.25;
       font-weight: 600;
       color: var(--text-main);
+    }
+
+    .hero-trust-text strong {
+      color: var(--royal-blue);
+      font-weight: 800;
+      font-size: 0.88rem;
     }
 
     /* Hero Right - Authentic Photo in Edoxi Curves */
@@ -836,11 +856,78 @@
     .video-frame-container {
       position: relative;
       width: 100%;
-      height: 380px;
+      aspect-ratio: 16 / 9;
+      height: auto;
       border-radius: var(--radius-md);
       overflow: hidden;
       background: #000000;
-      margin-top: auto;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 12px;
+    }
+
+    .video-yt-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .btn-watch-yt {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #FFFFFF;
+      color: #0F172A;
+      border: 1px solid var(--border-blue);
+      border-radius: var(--radius-full);
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-watch-yt:hover {
+      background: var(--royal-blue-surface);
+      border-color: var(--royal-blue);
+      color: var(--royal-blue);
+      transform: translateY(-1px);
+    }
+
+    .video-yt-channel-tag {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .video-features-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 14px;
+      padding: 16px;
+      background: var(--bg-card-blue);
+      border: 1px solid var(--border-blue);
+      border-radius: var(--radius-md);
+    }
+
+    .video-feat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.85rem;
+      color: var(--text-main);
+      line-height: 1.45;
+    }
+
+    .video-feat-item i {
+      color: var(--royal-blue);
+      margin-top: 2px;
+      font-size: 0.95rem;
+      flex-shrink: 0;
     }
 
     .video-frame-container iframe {
@@ -892,46 +979,350 @@
 
     .upi-grid {
       display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: 20px;
-      align-items: center;
-      margin: 16px 0;
+      grid-template-columns: 280px 1fr;
+      gap: 24px;
+      align-items: start;
+      margin: 14px 0;
       background: var(--bg-light-blue);
-      padding: 16px;
+      padding: 20px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-blue);
+    }
+
+    /* QR Column */
+    .upi-qr-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .upi-qr-frame {
+      background: #FFFFFF;
+      border: 2px solid var(--border-blue);
       border-radius: var(--radius-md);
+      padding: 12px;
+      width: 100%;
+      max-width: 270px;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      position: relative;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .upi-qr-frame:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--royal-blue);
     }
 
     .upi-qr-image {
       width: 100%;
-      max-width: 160px;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--border-light);
-      background: #FFFFFF;
-      padding: 6px;
+      max-width: 246px;
+      height: auto;
+      aspect-ratio: 1024 / 993;
+      object-fit: contain;
+      display: block;
+      border-radius: 4px;
     }
 
-    .upi-instructions ol {
-      padding-left: 18px;
-      font-size: 0.85rem;
-      color: var(--text-main);
+    .qr-zoom-hint {
+      margin-top: 8px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--royal-blue);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* UPI Action Buttons */
+    .upi-actions-stack {
+      width: 100%;
+      max-width: 270px;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 8px;
     }
 
-    .upi-instructions ol li strong {
+    .btn-upi-intent {
+      width: 100%;
+      padding: 11px 16px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: var(--radius-full);
+      background-color: var(--bright-yellow);
+      color: #0F172A;
+      box-shadow: 0 4px 12px rgba(255, 199, 44, 0.35);
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .btn-upi-intent:hover {
+      background-color: var(--bright-yellow-hover);
+      transform: translateY(-2px);
+      color: #0F172A;
+    }
+
+    .btn-copy-upi {
+      width: 100%;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      font-family: var(--font-heading);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border-radius: var(--radius-full);
+      background: #FFFFFF;
+      color: var(--royal-blue);
+      border: 1px solid var(--border-blue);
+      cursor: pointer;
+      transition: var(--transition);
+      line-height: 1.3;
+    }
+
+    .btn-copy-upi .copy-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+
+    .btn-copy-upi .copy-vpa {
+      white-space: nowrap;
+      font-weight: 800;
       color: var(--royal-blue);
     }
 
-    .upi-support-note {
+    .btn-copy-upi:hover {
+      background: var(--royal-blue-surface);
+      border-color: var(--royal-blue);
+    }
+
+    .btn-copy-upi.copied {
+      background: #DCFCE7;
+      color: #166534;
+      border-color: #86EFAC;
+    }
+
+    /* Instructions Column */
+    .upi-details-col {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .upi-payee-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-blue);
+      border-left: 4px solid var(--royal-blue);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .upi-payee-title {
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-light);
+    }
+
+    .upi-payee-name {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #0F172A;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .upi-payee-name .verified-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #166534;
+      background: #DCFCE7;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+    }
+
+    .upi-payee-vpa {
+      font-size: 0.86rem;
+      color: var(--royal-blue);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .upi-instructions-list {
+      padding-left: 20px;
+      font-size: 0.88rem;
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 0;
+    }
+
+    .upi-instructions-list li {
+      line-height: 1.5;
+    }
+
+    .upi-instructions-list li strong {
+      color: #0F172A;
+    }
+
+    .upi-verify-alert {
+      background: #FFFBEB;
+      border: 1px solid var(--border-yellow);
+      border-left: 4px solid var(--bright-yellow);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      font-size: 0.82rem;
+      color: #78350F;
+      line-height: 1.5;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .upi-intl-note {
+      background: #FFFFFF;
+      border: 1px dashed var(--border-blue);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
       font-size: 0.82rem;
       color: var(--text-muted);
-      margin-top: auto;
-      padding-top: 12px;
+      line-height: 1.5;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .upi-intl-note a {
+      color: var(--royal-blue);
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    .upi-support-note {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      padding-top: 14px;
       border-top: 1px solid var(--border-light);
       display: flex;
       align-items: center;
       gap: 8px;
+    }
+
+    /* Modal Styles */
+    .qr-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .qr-modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .qr-modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .qr-modal-dialog {
+      position: relative;
+      background: #FFFFFF;
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      max-width: 460px;
+      width: 100%;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-blue);
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transform: scale(0.94);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .qr-modal.active .qr-modal-dialog {
+      transform: scale(1);
+    }
+
+    .qr-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      line-height: 1;
+      color: var(--text-light);
+      cursor: pointer;
+      padding: 4px;
+      transition: color 0.2s;
+    }
+
+    .qr-modal-close:hover {
+      color: #0F172A;
+    }
+
+    .qr-modal-img-wrap {
+      background: #FFFFFF;
+      border: 2px solid var(--border-blue);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      margin: 18px 0;
+      max-width: 360px;
+      width: 100%;
+    }
+
+    .qr-modal-img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1024 / 993;
+      object-fit: contain;
+      display: block;
+    }
+
+    .qr-modal-actions {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 12px;
     }
 
     /* ============================================================
@@ -1323,7 +1714,9 @@
         justify-content: center;
       }
       .hero-trust-points {
-        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 16px;
       }
       .hero-right {
         order: -1;
@@ -1358,26 +1751,73 @@
     }
 
     @media (max-width: 768px) {
-      .hero-section {
-        padding-top: 175px;
-      }
+      /* Mobile Announcement Ticker: Clean Structured Layout (No cut-off, no overlap, clear text) */
       .top-announcement-bar {
         font-size: 0.76rem;
-        padding: 6px 12px;
+        padding: 8px 12px;
+        line-height: 1.35;
       }
       .top-announcement-inner {
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
+        gap: 6px;
         text-align: center;
       }
+      .top-announcement-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2px;
+      }
+      .ticker-headline {
+        font-weight: 800;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .ticker-sub {
+        font-size: 0.71rem;
+        opacity: 0.95;
+      }
+      .ticker-divider {
+        display: none;
+      }
+      .top-announcement-btn {
+        padding: 4px 14px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        flex-shrink: 0;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      }
+
+      section[id], footer[id] {
+        scroll-margin-top: 135px; /* Offset for stacked mobile ticker + navbar */
+      }
+      .hero-section {
+        padding-top: 140px; /* Offset for 85px ticker + 50px navbar, no overlap */
+        padding-bottom: 50px;
+      }
+
+      .hero-trust-points {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
       .nav-container {
-        height: 62px;
+        height: 50px; /* Reduced mobile navigation header height */
         padding: 0 16px;
       }
       .nav-brand-name {
-        font-size: 1.12rem;
+        font-size: 1.05rem;
+        line-height: 1.15;
       }
       .nav-brand-subtitle {
-        font-size: 0.68rem;
+        font-size: 0.62rem;
+        letter-spacing: 0.02em;
       }
       .nav-menu {
         display: none;
@@ -1387,9 +1827,11 @@
       }
       .nav-hamburger {
         display: block;
+        padding: 5px 9px;
+        font-size: 1.05rem;
       }
       .mobile-menu-drawer {
-        top: 104px;
+        top: 78px; /* Aligned to compact 28px ticker + 50px navbar */
       }
       .hero-title {
         font-size: 2.1rem;
@@ -1407,8 +1849,14 @@
       }
       .upi-grid {
         grid-template-columns: 1fr;
-        justify-items: center;
-        text-align: left;
+        gap: 20px;
+        padding: 18px;
+      }
+      .upi-qr-col {
+        align-items: center;
+      }
+      .upi-qr-frame, .upi-actions-stack {
+        max-width: 100%;
       }
       .footer-top-company {
         flex-direction: column;
@@ -1427,8 +1875,8 @@
     <aside class="top-announcement-bar" aria-label="Book Announcement">
       <div class="top-announcement-inner">
         <div class="top-announcement-content">
-          <i class="fa-solid fa-book-bookmark" aria-hidden="true"></i>
-          <span>ORACLE DBA PRACTICE BOOK – NOW AVAILABLE! | Learn Oracle DBA Step by Step | 11g, 12c, 19c &amp; 26ai</span>
+          <span class="ticker-headline"><i class="fa-solid fa-book-bookmark" aria-hidden="true"></i> ORACLE DBA PRACTICE BOOK – NOW AVAILABLE!</span>
+          <span class="ticker-sub"><span class="ticker-divider">|</span> Learn Oracle DBA Step by Step | 11g, 12c, 19c &amp; 26ai</span>
         </div>
         <a href="#books" class="top-announcement-btn">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
       </div>
@@ -1439,7 +1887,7 @@
       <div class="nav-container">
         <a href="#about" class="nav-brand" aria-label="MD Shahid Hussain Homepage">
           <span class="nav-brand-name">MD Shahid <span>Hussain</span></span>
-          <span class="nav-brand-subtitle">AI Product Manager | Training Enablement</span>
+          <span class="nav-brand-subtitle">AI Product Manager | Product Strategy &amp; Innovation</span>
         </a>
 
         <!-- ONLY 4 MENU ITEMS: About Me | Books & eBooks | Social Activities | Contact -->
@@ -1486,18 +1934,23 @@
           <div class="hero-left">
             <div class="hero-pill-badge">
               <span class="dot"></span>
-              <span>AI Product Manager | GenAI &amp; LLM Solutions | Training Enablement</span>
+              <span>AI Product Manager | Product Strategy, Design &amp; Innovation | Enterprise Technology</span>
             </div>
             
             <h1 class="hero-title">MD Shahid <span class="name-highlight">Hussain</span></h1>
             
             <p class="hero-designation">
-              Bridging Cutting-Edge AI Solutions with Scalable Corporate Training &amp; Enterprise Oracle Systems
+              AI Product Manager | Product Strategy, Design &amp; Innovation | Enterprise Technology
             </p>
             
-            <p class="hero-bio">
-              Over 15 years of technical leadership and corporate training enablement. Specializing in AI Product Management, Retrieval-Augmented Generation (RAG), and enterprise Oracle environments. Focused on transforming complex technical workflows into actionable products and high-impact training programs.
-            </p>
+            <div class="hero-bio">
+              <p>
+                A technology and product professional with 10+ years of IT experience, including 3+ years in AI Product Management, 5 years in Oracle Apps DBA, and 2 years in Director &amp; CEO leadership.
+              </p>
+              <p>
+                I bring together AI, product strategy, product design and product thinking to transform business challenges into practical, user-centric technology solutions. Passionate about Generative AI, LLMs, RAG and building products that deliver meaningful business value.
+              </p>
+            </div>
             
             <div class="hero-actions">
               <a href="#books" class="btn btn-yellow">
@@ -1510,16 +1963,20 @@
 
             <div class="hero-trust-points">
               <div class="hero-trust-item">
-                <div class="hero-trust-icon"><i class="fa-solid fa-award" aria-hidden="true"></i></div>
-                <div class="hero-trust-text">15+ Years<br />IT Experience</div>
+                <div class="hero-trust-icon"><i class="fa-solid fa-certificate" aria-hidden="true"></i></div>
+                <div class="hero-trust-text"><strong>10+ Years</strong><br /><span>Overall IT Experience</span></div>
               </div>
               <div class="hero-trust-item">
                 <div class="hero-trust-icon"><i class="fa-solid fa-brain" aria-hidden="true"></i></div>
-                <div class="hero-trust-text">AI Product<br />Strategy &amp; RAG</div>
+                <div class="hero-trust-text"><strong>3+ Years</strong><br /><span>AI Product Management</span></div>
               </div>
               <div class="hero-trust-item">
                 <div class="hero-trust-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
-                <div class="hero-trust-text">Oracle Apps<br />DBA Expert</div>
+                <div class="hero-trust-text"><strong>5 Years</strong><br /><span>Oracle Apps DBA</span></div>
+              </div>
+              <div class="hero-trust-item">
+                <div class="hero-trust-icon"><i class="fa-solid fa-user-tie" aria-hidden="true"></i></div>
+                <div class="hero-trust-text"><strong>2 Years</strong><br /><span>Director &amp; CEO Experience</span></div>
               </div>
             </div>
           </div>
@@ -1627,7 +2084,27 @@
             <h3><i class="fa-brands fa-youtube" aria-hidden="true"></i> Official Book Video &amp; Walkthrough</h3>
             <p>Take an inside tour of the 597-page curriculum, core exercises, and hands-on lab walk-throughs.</p>
             <div class="video-frame-container">
-              <iframe src="https://www.youtube.com/embed/mD5SPVwkc8w" title="Oracle DBA Practice Book Reel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/mD5SPVwkc8w?rel=0&amp;modestbranding=1" title="Oracle DBA Practice — Official Book Video by S³ Academy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="video-yt-bar">
+              <span class="video-yt-channel-tag"><i class="fa-solid fa-circle-check" style="color:var(--royal-blue);"></i> Official S³ Academy Reel</span>
+              <a href="https://youtu.be/mD5SPVwkc8w" target="_blank" rel="noopener noreferrer" class="btn-watch-yt" title="Watch full video on YouTube">
+                <i class="fa-brands fa-youtube" style="color:#FF0000; font-size:1.05rem;" aria-hidden="true"></i> Watch on YouTube <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.75rem;" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="video-features-list">
+              <div class="video-feat-item">
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                <span><strong>597 Comprehensive Pages:</strong> Real-world production DBA exercises &amp; step-by-step administration scripts.</span>
+              </div>
+              <div class="video-feat-item">
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                <span><strong>Multi-Release Architecture:</strong> Hands-on labs tested on Oracle 11g, 12c, 19c and latest 26ai.</span>
+              </div>
+              <div class="video-feat-item">
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                <span><strong>Direct eBook Access:</strong> Complete PDF delivered directly to your email inbox upon ₹199 UPI confirmation.</span>
+              </div>
             </div>
           </div>
 
@@ -1635,28 +2112,86 @@
           <div class="upi-payment-box" id="s3-upi-payment">
             <div class="upi-header">
               <h3><i class="fa-solid fa-qrcode" aria-hidden="true"></i> Direct UPI Instant Payment</h3>
-              <span class="upi-badge-fast"><i class="fa-solid fa-bolt"></i> Instant Access</span>
+              <span class="upi-badge-fast"><i class="fa-solid fa-bolt"></i> ₹199 • Instant Access</span>
             </div>
             
-            <p style="font-size: 0.88rem; color: var(--text-muted);">
-              Scan the verified personal UPI QR code below using any UPI application (Google Pay, PhonePe, Paytm, BHIM) for instant eBook purchase.
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">
+              Scan or tap the verified personal UPI QR code below using any UPI app (Google Pay, PhonePe, Paytm, BHIM) for instant eBook purchase.
             </p>
 
             <div class="upi-grid">
-              <img src="WhatsApp Image 2026-10-31 at 7.09.37 AM.jpeg" alt="Personal UPI QR Code for Book Payment" class="upi-qr-image" width="160" height="160" />
-              <div class="upi-instructions">
-                <ol>
-                  <li>Scan QR code with your UPI App.</li>
-                  <li>Pay exact amount: <strong>₹199</strong> (India).</li>
-                  <li>Share screenshot to <strong>scube.books@gmail.com</strong> or WhatsApp.</li>
-                  <li>Receive the complete 597-page eBook PDF directly in your inbox.</li>
+              
+              <!-- Left Column: Enlarged ~270px QR Code with Tap-to-Enlarge & Direct Buttons -->
+              <div class="upi-qr-col">
+                <div class="upi-qr-frame" id="openQrModalBtn" role="button" tabindex="0" title="Click or tap to enlarge QR code" aria-label="Enlarge UPI QR Code">
+                  <img src="WhatsApp Image 2026-10-31 at 7.09.37 AM.jpeg" alt="Original UPI QR Code for MD Shahid Hussain" class="upi-qr-image" width="270" height="262" />
+                  <span class="qr-zoom-hint"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Click or Tap to Enlarge</span>
+                </div>
+
+                <div class="upi-actions-stack">
+                  <!-- Direct UPI Intent for Mobile / Desktop Handlers -->
+                  <a href="upi://pay?pa=9702806769@indie&amp;pn=MD%20SHAHID%20HUSSAIN&amp;am=199&amp;cu=INR&amp;tn=Oracle%20DBA%20Practice%20Book" class="btn-upi-intent" title="Pay directly via any installed UPI App">
+                    <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i> Pay ₹199 via UPI App
+                  </a>
+
+                  <!-- 1-Click Copy UPI ID -->
+                  <button type="button" class="btn-copy-upi" id="copyUpiBtn" onclick="copyUpiId('copyUpiBtn')" title="Copy UPI VPA to clipboard">
+                    <span class="copy-label"><i class="fa-solid fa-copy" aria-hidden="true"></i> Copy UPI ID:</span>
+                    <span class="copy-vpa">9702806769@indie</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Right Column: Verification & Detailed Step-by-Step Instructions -->
+              <div class="upi-details-col">
+                
+                <!-- UPI Recipient Details Card -->
+                <div class="upi-payee-card">
+                  <span class="upi-payee-title">UPI Recipient Details</span>
+                  <div class="upi-payee-name">
+                    <span>MD SHAHID HUSSAIN</span>
+                  </div>
+                  <div class="upi-payee-vpa">
+                    <i class="fa-solid fa-at" aria-hidden="true"></i>
+                    <span>UPI ID: 9702806769@indie</span>
+                    <small style="color:var(--text-light); font-weight:500;">(IndusInd Bank)</small>
+                  </div>
+                </div>
+
+                <!-- 4-Step Instructions with Verification Requirement -->
+                <ol class="upi-instructions-list">
+                  <li>
+                    <strong>Scan QR or Tap Button:</strong> Scan the enlarged QR code above with your UPI App (Google Pay, PhonePe, Paytm, BHIM) or tap <em>Pay ₹199 via UPI App</em> on mobile.
+                  </li>
+                  <li>
+                    <strong>Verify Recipient &amp; Amount:</strong> Before entering your secret UPI PIN, verify that the payee shows <strong>MD SHAHID HUSSAIN</strong> (<code>9702806769@indie</code>) and the amount is <strong>₹199</strong>.
+                  </li>
+                  <li>
+                    <strong>Send Screenshot / UTR:</strong> Email your payment confirmation screenshot or transaction UTR to <strong>scube.books@gmail.com</strong> or share on WhatsApp.
+                  </li>
+                  <li>
+                    <strong>Receive Your eBook:</strong> After transaction verification, the complete 597-page eBook PDF is delivered directly to your email inbox.
+                  </li>
                 </ol>
+
+                <!-- Verification Alert -->
+                <div class="upi-verify-alert">
+                  <i class="fa-solid fa-triangle-exclamation" style="font-size:1.1rem; color:#D97706; margin-top:2px;" aria-hidden="true"></i>
+                  <span><strong>Important Security Note:</strong> Always verify that the recipient displays <strong>MD SHAHID HUSSAIN</strong> and the amount is <strong>₹199</strong> before authorizing payment.</span>
+                </div>
+
+                <!-- International Edition Note -->
+                <div class="upi-intl-note">
+                  <i class="fa-solid fa-earth-americas" style="font-size:1.1rem; color:var(--royal-blue); margin-top:2px;" aria-hidden="true"></i>
+                  <span><strong>International Buyers:</strong> Outside India, the International Edition is <strong>₹499 ($9.99)</strong>. Please order via <a href="mailto:scube.books@gmail.com?subject=International%20Order%20%E2%80%93%20Oracle%20DBA%20Practice&amp;body=Hello%20Shahid,%0A%0AI%20am%20ordering%20the%20International%20Edition%20of%20Oracle%20DBA%20Practice%20Book%20($9.99%20/%20Rs.499).%0A%0AName:%0AEmail:%0ACountry:">Email</a> or <a href="https://wa.me/918282898931?text=Hello%20Shahid%2C%20I%20am%20ordering%20the%20International%20Edition%20of%20Oracle%20DBA%20Practice%20Book">WhatsApp</a> for international payment instructions.</span>
+                </div>
+
               </div>
             </div>
 
             <div class="upi-support-note">
               <i class="fa-solid fa-circle-info" aria-hidden="true" style="color:var(--royal-blue);"></i>
-              <span>Book enquiry / payment help: <a href="mailto:scube.books@gmail.com" style="color:var(--royal-blue); font-weight:700;">scube.books@gmail.com</a> | WhatsApp: <a href="https://wa.me/918282898931" style="color:var(--royal-blue); font-weight:700;">+91 8282898931</a></span>
+              <span>Book enquiry &amp; payment support: <a href="mailto:scube.books@gmail.com" style="color:var(--royal-blue); font-weight:700;">scube.books@gmail.com</a> | WhatsApp: <a href="https://wa.me/918282898931" style="color:var(--royal-blue); font-weight:700;">+91 8282898931</a></span>
             </div>
           </div>
 
@@ -1787,6 +2322,36 @@
 
       </div>
     </section>
+      <!-- Tap-to-Enlarge QR Modal Dialog -->
+    <div id="qrModal" class="qr-modal" role="dialog" aria-modal="true" aria-labelledby="qrModalTitle" hidden>
+      <div class="qr-modal-backdrop" id="qrModalBackdrop"></div>
+      <div class="qr-modal-dialog">
+        <button type="button" class="qr-modal-close" id="closeQrModalBtn" aria-label="Close modal">&times;</button>
+        <div style="margin-bottom: 8px;">
+          <span style="font-size:0.76rem; font-weight:700; color:var(--royal-blue); background:var(--royal-blue-surface); border:1px solid var(--border-blue); padding:4px 12px; border-radius:var(--radius-full);"><i class="fa-solid fa-shield-halved"></i> Verified UPI QR</span>
+        </div>
+        <h3 id="qrModalTitle" style="font-family:var(--font-heading); font-size:1.35rem; font-weight:800; color:#0F172A; margin:6px 0 2px;">Scan to Pay ₹199</h3>
+        <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:12px;">Payee: <strong>MD SHAHID HUSSAIN</strong> (<code>9702806769@indie</code>)</p>
+        
+        <div class="qr-modal-img-wrap">
+          <img src="WhatsApp Image 2026-10-31 at 7.09.37 AM.jpeg" alt="Enlarged UPI QR Code for MD Shahid Hussain" class="qr-modal-img" width="360" height="349" />
+        </div>
+
+        <div class="qr-modal-actions">
+          <a href="upi://pay?pa=9702806769@indie&amp;pn=MD%20SHAHID%20HUSSAIN&amp;am=199&amp;cu=INR&amp;tn=Oracle%20DBA%20Practice%20Book" class="btn-upi-intent" style="width:100%; justify-content:center;">
+            <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i> Pay ₹199 via UPI App
+          </a>
+          <button type="button" class="btn-copy-upi" id="modalCopyBtn" onclick="copyUpiId('modalCopyBtn')" style="width:100%; justify-content:center;">
+            <span class="copy-label"><i class="fa-solid fa-copy" aria-hidden="true"></i> Copy UPI ID:</span>
+            <span class="copy-vpa">9702806769@indie</span>
+          </button>
+        </div>
+
+        <p style="font-size:0.78rem; color:var(--text-light); line-height:1.4; margin-top:8px;">
+          Please verify recipient <strong>MD SHAHID HUSSAIN</strong> and amount <strong>₹199</strong> before authorizing payment.
+        </p>
+      </div>
+    </div>
   </main>
 
   <!-- ============================================================
@@ -1830,7 +2395,7 @@
         <div class="footer-brand-col">
           <div class="footer-name">MD Shahid <span>Hussain</span></div>
           <p class="footer-tagline">
-            AI Product Manager | Enterprise Oracle Apps DBA | Corporate IT Training Enablement with 15+ years of technology and operational leadership.
+            AI Product Manager | Enterprise Oracle Apps DBA | Corporate IT Training Enablement with 10+ years of technology and operational leadership.
           </p>
         </div>
 
@@ -1886,6 +2451,93 @@
         hamburgerBtn.setAttribute('aria-expanded', 'false');
         hamburgerBtn.innerHTML = '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
       });
+    });
+
+    
+    // Copy UPI ID function
+    function copyUpiId(btnId) {
+      const upiId = '9702806769@indie';
+      const btn = typeof btnId === 'string' ? document.getElementById(btnId) : btnId;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(upiId).then(() => {
+          showCopySuccess(btn);
+        }).catch(() => {
+          fallbackCopyText(upiId, btn);
+        });
+      } else {
+        fallbackCopyText(upiId, btn);
+      }
+    }
+
+    function fallbackCopyText(text, btn) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showCopySuccess(btn);
+      } catch (err) {
+        alert('UPI ID: ' + text);
+      }
+      document.body.removeChild(ta);
+    }
+
+    function showCopySuccess(btn) {
+      if (!btn) return;
+      const originalHTML = btn.innerHTML;
+      btn.classList.add('copied');
+      btn.innerHTML = '<span class="copy-label"><i class="fa-solid fa-check" aria-hidden="true"></i> Copied:</span> <span class="copy-vpa">9702806769@indie!</span>';
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.innerHTML = originalHTML;
+      }, 2500);
+    }
+
+    // Tap-to-Enlarge Modal Logic
+    const qrModal = document.getElementById('qrModal');
+    const openQrModalBtn = document.getElementById('openQrModalBtn');
+    const closeQrModalBtn = document.getElementById('closeQrModalBtn');
+    const qrModalBackdrop = document.getElementById('qrModalBackdrop');
+
+    function openModal() {
+      if (!qrModal) return;
+      qrModal.removeAttribute('hidden');
+      requestAnimationFrame(() => {
+        qrModal.classList.add('active');
+      });
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      if (!qrModal) return;
+      qrModal.classList.remove('active');
+      setTimeout(() => {
+        qrModal.setAttribute('hidden', '');
+        document.body.style.overflow = '';
+      }, 250);
+    }
+
+    if (openQrModalBtn) {
+      openQrModalBtn.addEventListener('click', openModal);
+      openQrModalBtn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openModal();
+        }
+      });
+    }
+
+    if (closeQrModalBtn) closeQrModalBtn.addEventListener('click', closeModal);
+    if (qrModalBackdrop) qrModalBackdrop.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && qrModal && qrModal.classList.contains('active')) {
+        closeModal();
+      }
     });
 
     // Active Navigation Highlight on Scroll
