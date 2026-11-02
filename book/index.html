@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--
+    ════════════════════════════════════════════════════════════
+    BOOK PAGE — Oracle DBA Practice
+    URL: /shahid-portfolio/book/
+    PURPOSE: Standalone social-sharing page for the book.
+    ISOLATION: All CSS is scoped inside this file only.
+                No styles from index.html are used or modified.
+    ════════════════════════════════════════════════════════════
+  -->
+
+  <!-- Page title & description -->
+  <title>Oracle DBA Practice: An End-to-End Beginner's Guide | S³ Academy</title>
+  <meta name="description"
+        content="Oracle DBA Practice: An End-to-End Beginner's Guide — includes Oracle Multitenant Database Architecture from 12c to 26ai. By MD Shahid Hussain. Published by S³ Academy. ISBN: 978-93-345-6019-0. India ₹199 | International ₹499." />
+  <link rel="canonical" href="https://hussaindbaorg260-creator.github.io/shahid-portfolio/book/" />
+
+  <!-- ═══════════════════════════════════════════════════════
+       OPEN GRAPH — WhatsApp · Facebook · LinkedIn · Telegram
+       All tags in initial HTML source — NOT injected by JS.
+  ═══════════════════════════════════════════════════════ -->
+  <meta property="og:type"         content="website" />
+  <meta property="og:site_name"    content="S³ Academy" />
+  <meta property="og:title"        content="Oracle DBA Practice: An End-to-End Beginner's Guide" />
+  <meta property="og:description"  content="Includes Oracle Multitenant Database Architecture: From 12c to 26ai. A practical, 597-page Oracle DBA manual by MD Shahid Hussain. India ₹199 | International ₹499. Free 28-page sample available." />
+  <meta property="og:url"          content="https://hussaindbaorg260-creator.github.io/shahid-portfolio/book/" />
+  <meta property="og:image"        content="https://hussaindbaorg260-creator.github.io/shahid-portfolio/oracle-dba-cover.jpg" />
+  <meta property="og:image:width"  content="1024" />
+  <meta property="og:image:height" content="1536" />
+  <meta property="og:image:alt"    content="Oracle DBA Practice book cover — S³ Academy" />
+  <meta property="og:locale"       content="en_IN" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Oracle DBA Practice: An End-to-End Beginner's Guide" />
+  <meta name="twitter:description" content="Includes Oracle Multitenant Database Architecture: From 12c to 26ai. India ₹199 | International ₹499. Free 28-page sample." />
+  <meta name="twitter:image"       content="https://hussaindbaorg260-creator.github.io/shahid-portfolio/oracle-dba-cover.jpg" />
+
+  <!-- Fonts — same as main portfolio -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Icons — same version as main portfolio (6.5.1) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /*
+    ════════════════════════════════════════════════════════════
+    ISOLATION NOTE:
+    All selectors below are self-contained in this page only.
+    The main portfolio's index.html CSS is not imported,
+    extended, or modified in any way.
+    ════════════════════════════════════════════════════════════
+
+    COLOR TOKENS — copied exactly from main portfolio :root
+    ════════════════════════════════════════════════════════════
+    */
+    :root {
+      --bg-white:            #FFFFFF;
+      --bg-page:             #FAFCFF;
+      --bg-light-blue:       #F0F7FF;
+      --bg-card:             #FFFFFF;
+
+      --bright-yellow:       #FFC72C;
+      --bright-yellow-hover: #EBB21B;
+      --bright-yellow-light: #FFF9E6;
+
+      --royal-blue:          #1E40AF;
+      --royal-blue-dark:     #1E3A8A;
+      --royal-blue-light:    #3B82F6;
+      --royal-blue-surface:  #EFF6FF;
+
+      --border-light:        #E2E8F0;
+      --border-blue:         #DBEAFE;
+      --border-yellow:       #FDE68A;
+
+      --text-main:           #1E293B;
+      --text-muted:          #475569;
+      --text-light:          #64748B;
+      --text-heading:        #0F172A;
+
+      --radius-sm:  8px;
+      --radius-md:  12px;
+      --radius-lg:  18px;
+      --radius-xl:  24px;
+      --radius-full:9999px;
+
+      --shadow-sm: 0 2px 6px rgba(15,23,42,.04);
+      --shadow-md: 0 8px 24px -4px rgba(15,23,42,.07);
+      --shadow-lg: 0 16px 36px -6px rgba(15,23,42,.1);
+
+      --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --transition:   all 0.25s cubic-bezier(0.16,1,0.3,1);
+    }
+
+    /* ── Reset ────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html  { font-size: 16px; scroll-behavior: smooth; }
+    body  {
+      background-color: var(--bg-white);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    img  { max-width: 100%; height: auto; display: block; }
+    a    { color: inherit; text-decoration: none; }
+
+    /* ── Skip link ────────────────────────────────────────── */
+    .skip-link {
+      position: absolute; top: -60px; left: 16px; z-index: 9999;
+      background: var(--bright-yellow); color: var(--text-heading);
+      padding: 8px 16px; border-radius: var(--radius-full); font-weight: 700;
+      transition: top .2s;
+    }
+    .skip-link:focus { top: 12px; }
+
+    /* ── Page wrapper ─────────────────────────────────────── */
+    .page-wrap {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+    }
+
+    /* ── Minimal top bar ──────────────────────────────────── */
+    .topbar {
+      background: var(--bg-white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .topbar-brand {
+      font-family: var(--font-heading);
+      font-weight: 800; font-size: .95rem;
+      color: var(--text-heading); display: flex; align-items: center; gap: 8px;
+    }
+    .topbar-brand-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--bright-yellow);
+      display: inline-block;
+    }
+    .topbar-back {
+      font-size: .82rem; color: var(--text-muted);
+      display: flex; align-items: center; gap: 6px;
+      transition: color .2s;
+    }
+    .topbar-back:hover { color: var(--royal-blue); }
+
+    /* ── Main card ────────────────────────────────────────── */
+    main {
+      flex: 1;
+      display: flex; align-items: flex-start; justify-content: center;
+      padding: 48px 20px 64px;
+      background: var(--bg-page);
+    }
+    .book-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-lg);
+      width: 100%; max-width: 860px;
+      overflow: hidden;
+    }
+
+    /* ── Card inner grid ──────────────────────────────────── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+    }
+
+    /* ── Cover column ─────────────────────────────────────── */
+    .cover-col {
+      background: var(--bg-light-blue);
+      border-right: 1px solid var(--border-blue);
+      padding: 40px 28px;
+      display: flex; flex-direction: column; align-items: center; gap: 16px;
+    }
+    .cover-frame {
+      width: 100%; position: relative;
+    }
+    .book-cover {
+      width: 100%;
+      border-radius: var(--radius-md);
+      box-shadow:
+        0 4px 8px rgba(15,23,42,.1),
+        0 20px 48px rgba(15,23,42,.18);
+      transition: var(--transition);
+    }
+    .cover-frame:hover .book-cover {
+      transform: translateY(-4px);
+      box-shadow:
+        0 8px 16px rgba(15,23,42,.12),
+        0 28px 56px rgba(15,23,42,.22);
+    }
+    /* Subtle book-spine effect */
+    .cover-frame::after {
+      content: '';
+      position: absolute; top: 6px; right: -6px; bottom: 6px; width: 12px;
+      background: linear-gradient(180deg, #b8943c, #7a5e1a);
+      border-radius: 0 4px 4px 0;
+      box-shadow: 3px 0 8px rgba(0,0,0,.25);
+      z-index: -1;
+    }
+    .cover-isbn {
+      font-size: .72rem; color: var(--text-light);
+      text-align: center; letter-spacing: .04em; line-height: 1.5;
+    }
+    .cover-isbn strong { color: var(--text-muted); display: block; }
+
+    /* ── Info column ──────────────────────────────────────── */
+    .info-col {
+      padding: 40px 36px;
+      display: flex; flex-direction: column; gap: 0;
+    }
+
+    /* Publisher badge */
+    .pub-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: var(--royal-blue-surface);
+      border: 1px solid var(--border-blue);
+      border-radius: var(--radius-full);
+      padding: 5px 14px; font-size: .75rem; font-weight: 700;
+      color: var(--royal-blue); letter-spacing: .06em;
+      text-transform: uppercase; margin-bottom: 18px;
+      width: fit-content;
+    }
+
+    /* Title */
+    .book-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.35rem, 3vw, 1.85rem);
+      font-weight: 800; color: var(--text-heading);
+      line-height: 1.2; margin-bottom: 10px;
+    }
+    .book-title span { color: var(--royal-blue); }
+
+    /* Subtitle */
+    .book-subtitle {
+      font-size: .95rem; color: var(--text-muted);
+      font-style: italic; line-height: 1.55; margin-bottom: 20px;
+    }
+
+    /* Divider */
+    .rule {
+      border: none; border-top: 1px solid var(--border-light);
+      margin: 20px 0;
+    }
+
+    /* Description */
+    .book-desc {
+      font-size: .92rem; color: var(--text-muted);
+      line-height: 1.75; margin-bottom: 28px;
+    }
+
+    /* Pricing */
+    .pricing-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+      margin-bottom: 28px;
+    }
+    .price-box {
+      border-radius: var(--radius-md); padding: 16px 18px;
+      border: 1px solid; text-align: center;
+    }
+    .price-box-india {
+      background: var(--bright-yellow-light);
+      border-color: var(--border-yellow);
+    }
+    .price-box-intl {
+      background: var(--royal-blue-surface);
+      border-color: var(--border-blue);
+    }
+    .price-region {
+      font-size: .7rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; margin-bottom: 4px;
+    }
+    .price-box-india  .price-region { color: #92400E; }
+    .price-box-intl   .price-region { color: var(--royal-blue); }
+    .price-amount {
+      font-family: var(--font-heading);
+      font-size: 1.8rem; font-weight: 800; line-height: 1; margin-bottom: 3px;
+    }
+    .price-box-india .price-amount  { color: #0F172A; }
+    .price-box-intl  .price-amount  { color: var(--royal-blue); }
+    .price-note { font-size: .72rem; color: var(--text-light); line-height: 1.4; }
+
+    /* Buttons — exact same CSS as main portfolio */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 10px; padding: 13px 26px;
+      border-radius: var(--radius-full);
+      font-family: var(--font-heading);
+      font-size: .95rem; font-weight: 700;
+      cursor: pointer; border: 2px solid transparent;
+      transition: var(--transition); text-align: center;
+      white-space: nowrap; text-decoration: none;
+    }
+    .btn:focus-visible { outline: 3px solid var(--bright-yellow); outline-offset: 3px; }
+
+    .btn-yellow {
+      background-color: var(--bright-yellow); color: #0F172A;
+      box-shadow: 0 4px 14px rgba(255,199,44,.4);
+    }
+    .btn-yellow:hover {
+      background-color: var(--bright-yellow-hover);
+      box-shadow: 0 6px 20px rgba(255,199,44,.55);
+      transform: translateY(-2px); color: #0F172A;
+    }
+    .btn-whatsapp {
+      background-color: #25D366; color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(37,211,102,.3);
+    }
+    .btn-whatsapp:hover {
+      background-color: #20BD5A;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(37,211,102,.45); color: #FFFFFF;
+    }
+    .btn-outline-royal {
+      background-color: transparent;
+      border-color: var(--royal-blue); color: var(--royal-blue);
+    }
+    .btn-outline-royal:hover {
+      background-color: var(--royal-blue); color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    .cta-group {
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .cta-group .btn { width: 100%; }
+
+    /* Delivery note */
+    .delivery-note {
+      margin-top: 16px;
+      background: var(--bg-light-blue);
+      border: 1px solid var(--border-blue);
+      border-left: 3px solid var(--royal-blue-light);
+      border-radius: var(--radius-sm);
+      padding: 11px 15px;
+      font-size: .8rem; color: var(--text-muted); line-height: 1.6;
+    }
+
+    /* ── Thin footer ──────────────────────────────────────── */
+    footer {
+      background: var(--bg-white);
+      border-top: 1px solid var(--border-light);
+      padding: 18px 24px;
+      text-align: center;
+      font-size: .78rem; color: var(--text-light); line-height: 1.6;
+    }
+    footer a { color: var(--royal-blue); }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── Responsive ───────────────────────────────────────── */
+    @media (max-width: 700px) {
+      main { padding: 24px 14px 48px; }
+      .card-grid { grid-template-columns: 1fr; }
+      .cover-col {
+        border-right: none;
+        border-bottom: 1px solid var(--border-blue);
+        padding: 32px 24px;
+      }
+      .cover-frame { max-width: 200px; margin: 0 auto; }
+      .info-col { padding: 28px 22px; }
+      .pricing-row { grid-template-columns: 1fr 1fr; }
+      .book-title { font-size: 1.25rem; }
+    }
+    @media (max-width: 420px) {
+      .pricing-row { grid-template-columns: 1fr; }
+      .topbar { flex-direction: column; gap: 10px; align-items: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+<a class="skip-link" href="#book-main">Skip to book information</a>
+
+<div class="page-wrap">
+
+  <!-- Minimal top bar — S³ Academy branding only -->
+  <header class="topbar">
+    <div class="topbar-brand">
+      <span class="topbar-brand-dot" aria-hidden="true"></span>
+      S³ Academy – Training &amp; Research Center
+    </div>
+    <a class="topbar-back"
+       href="https://hussaindbaorg260-creator.github.io/shahid-portfolio/"
+       aria-label="Back to main portfolio">
+      <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Main Portfolio
+    </a>
+  </header>
+
+  <!-- Book product card -->
+  <main id="book-main" aria-label="Book information">
+    <div class="book-card">
+      <div class="card-grid">
+
+        <!-- LEFT: Cover -->
+        <div class="cover-col">
+          <div class="cover-frame">
+            <img
+              class="book-cover"
+              src="../oracle-dba-cover.jpg"
+              width="300" height="400"
+              alt="Oracle DBA Practice: An End-to-End Beginner's Guide — official book cover, published by S³ Academy"
+              loading="eager"
+            />
+          </div>
+
+          <p class="cover-isbn">
+            <strong>ISBN</strong>
+            978-93-345-6019-0
+          </p>
+        </div>
+
+        <!-- RIGHT: Info -->
+        <div class="info-col">
+
+          <span class="pub-badge">
+            <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+            S³ Academy Publication
+          </span>
+
+          <h1 class="book-title">
+            Oracle DBA Practice:<br>
+            <span>An End-to-End Beginner's Guide</span>
+          </h1>
+
+          <p class="book-subtitle">
+            Includes Oracle Multitenant Database Architecture: From 12c to 26ai
+          </p>
+
+          <hr class="rule" />
+
+          <p class="book-desc">
+            A practical, 597-page Oracle DBA manual covering installation and configuration,
+            startup and shutdown, parameter files, tablespaces, users and security, RMAN,
+            Data Pump, backup and recovery, ASM, Data Guard, performance tuning, and Oracle
+            Multitenant Architecture — Container Databases (CDB) and Pluggable Databases (PDB)
+            — from Oracle 12c through Oracle AI Database 26ai.
+            Includes a free 28-page sample.
+          </p>
+
+          <!-- Pricing -->
+          <div class="pricing-row" role="list" aria-label="Book pricing">
+
+            <div class="price-box price-box-india" role="listitem" aria-label="India price">
+              <p class="price-region">
+                <i class="fa-solid fa-flag" aria-hidden="true"></i> India
+              </p>
+              <p class="price-amount">₹199</p>
+              <p class="price-note">Digital PDF</p>
+            </div>
+
+            <div class="price-box price-box-intl" role="listitem" aria-label="International price">
+              <p class="price-region">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i> International
+              </p>
+              <p class="price-amount">₹499</p>
+              <p class="price-note">Approx. $9.99 USD</p>
+            </div>
+
+          </div>
+
+          <!-- CTA buttons — verified URLs from existing portfolio only -->
+          <div class="cta-group" role="group" aria-label="Book actions">
+
+            <!-- Free sample — existing verified link -->
+            <a class="btn btn-outline-royal"
+               href="../Oracle_DBA_Practice_Free_Sample_28_Pages.pdf"
+               target="_blank" rel="noopener"
+               aria-label="Download free 28-page sample PDF (opens in new tab)">
+              <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+              Download Free 28-Page Sample
+            </a>
+
+            <!-- WhatsApp order — verified URL from existing portfolio -->
+            <a class="btn btn-whatsapp"
+               href="https://wa.me/918282898931?text=Hello%20Shahid%2C%20I%20want%20to%20order%20the%20Oracle%20DBA%20Practice%20Book"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Order Oracle DBA Practice book via WhatsApp">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              Order on WhatsApp
+            </a>
+
+            <!-- Email order — verified URL from existing portfolio -->
+            <a class="btn btn-yellow"
+               href="mailto:scube.books@gmail.com?subject=Book%20Order%20-%20Oracle%20DBA%20Practice&body=Hello%20Shahid,%0A%0AI%20would%20like%20to%20order%20the%20Oracle%20DBA%20Practice%20Book.%0A%0AName:%0AEmail:%0APhone:%0ALocation:"
+               aria-label="Order Oracle DBA Practice book via email">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              Order Full Book via Email
+            </a>
+
+          </div>
+
+          <!-- Delivery note -->
+          <div class="delivery-note" role="note">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            <strong>Digital delivery:</strong> This is a PDF eBook. Orders are placed via WhatsApp or email.
+            Payment instructions are shared manually. The PDF is delivered after payment verification —
+            not automatically.
+          </div>
+
+        </div><!-- /info-col -->
+      </div><!-- /card-grid -->
+    </div><!-- /book-card -->
+  </main>
+
+  <!-- Thin footer -->
+  <footer>
+    <p>
+      © <span id="yr">2026</span> S³ Academy – Training &amp; Research Center &nbsp;·&nbsp;
+      Empowering Minds. Shaping Futures. &nbsp;·&nbsp;
+      <a href="https://hussaindbaorg260-creator.github.io/shahid-portfolio/#books">View on Portfolio</a>
+    </p>
+  </footer>
+
+</div><!-- /page-wrap -->
+
+<script>
+  /* Year only — no other JS needed */
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
